@@ -252,15 +252,111 @@
     margin-right: 4px;
   }
 
+  /* === MOBILE TOP NAV === */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    background: rgba(10, 14, 26, 0.97);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    z-index: 200;
+    backdrop-filter: blur(12px);
+    align-items: center;
+    padding: 0 16px;
+    justify-content: space-between;
+  }
+  .mobile-nav .mobile-title {
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+  .mobile-nav .hamburger {
+    background: none;
+    border: none;
+    color: #e0e6ed;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 48px; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 14, 26, 0.98);
+    z-index: 199;
+    overflow-y: auto;
+    padding: 12px 0;
+    backdrop-filter: blur(12px);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu .nav-group { padding: 0 12px; margin-bottom: 8px; }
+  .mobile-menu .nav-group-title {
+    font-size: 0.65rem;
+    color: #4a5568;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 8px 4px;
+    font-weight: 600;
+  }
+  .mobile-menu .nav-link {
+    display: block;
+    padding: 10px 12px;
+    color: #6b7a8d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .mobile-menu .nav-link:hover { background: rgba(96,165,250,0.1); color: #a5b4c6; }
+  .mobile-menu .nav-icon { margin-right: 8px; }
+
   /* Responsive */
   @media (max-width: 900px) {
     .sidebar { display: none; }
-    .main { margin-left: 0; }
+    .mobile-nav { display: flex; }
+    .main { margin-left: 0; padding-top: 60px; }
     .funnel-grid { grid-template-columns: repeat(4, 1fr); }
   }
 </style>
 </head>
 <body>
+
+<!-- ====== MOBILE TOP NAV ====== -->
+<div class="mobile-nav">
+  <span class="mobile-title">S&P 500 均值回归</span>
+  <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open'); this.textContent = this.textContent === '☰' ? '✕' : '☰'">☰</button>
+</div>
+<div class="mobile-menu">
+  <div class="nav-group">
+    <div class="nav-group-title">Part I · 指数层面</div>
+    <a class="nav-link" href="#summary" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">📊</span>核心数据</a>
+    <a class="nav-link" href="#s1" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">📈</span>每年实际回报率</a>
+    <a class="nav-link" href="#s2" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">🔻</span>均值回归漏斗</a>
+    <a class="nav-link" href="#s3" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">〰️</span>滚动年化收益率</a>
+    <a class="nav-link" href="#s4" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">🎯</span>任意入场 → 2024</a>
+    <a class="nav-link" href="#s5" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">💰</span>$100 累积增长</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">Part II · 行业层面</div>
+    <a class="nav-link" href="#s6" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">🔄</span>行业权重演变</a>
+    <a class="nav-link" href="#s8" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">🏆</span>Top 10 变迁</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">Part III · 公司层面</div>
+    <a class="nav-link" href="#s7" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">🕰️</span>创造性破坏时间线</a>
+    <a class="nav-link" href="#s9" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">📉</span>年度换手率</a>
+    <a class="nav-link" href="#s10" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">⏱️</span>公司存活时间分布</a>
+    <a class="nav-link" href="#s11" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">🧬</span>1194家公司全景</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">Part IV · 结论</div>
+    <a class="nav-link" href="#mechanism" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">⚙️</span>核心机制解析</a>
+    <a class="nav-link" href="#data" onclick="document.querySelector('.mobile-menu').classList.remove('open'); document.querySelector('.hamburger').textContent='☰'"><span class="nav-icon">📋</span>年度数据 (可展开)</a>
+  </div>
+</div>
 
 <!-- ====== SIDEBAR NAVIGATION ====== -->
 <nav class="sidebar">
