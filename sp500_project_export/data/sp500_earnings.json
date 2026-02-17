@@ -1,0 +1,874 @@
+[
+  {
+    "year": 1928,
+    "price": 23.15,
+    "eps": 1.38,
+    "real_eps": 24.71,
+    "pe": 16.78,
+    "cape": 25.3
+  },
+  {
+    "year": 1929,
+    "price": 21.4,
+    "eps": 1.61,
+    "real_eps": 28.65,
+    "pe": 13.29,
+    "cape": 22.01,
+    "eps_growth": 16.67
+  },
+  {
+    "year": 1930,
+    "price": 15.51,
+    "eps": 0.97,
+    "real_eps": 18.44,
+    "pe": 15.99,
+    "cape": 16.06,
+    "eps_growth": -39.75
+  },
+  {
+    "year": 1931,
+    "price": 8.44,
+    "eps": 0.61,
+    "real_eps": 12.79,
+    "pe": 13.84,
+    "cape": 9.31,
+    "eps_growth": -37.11
+  },
+  {
+    "year": 1932,
+    "price": 6.82,
+    "eps": 0.41,
+    "real_eps": 9.58,
+    "pe": 16.63,
+    "cape": 8.26,
+    "eps_growth": -32.79
+  },
+  {
+    "year": 1933,
+    "price": 9.97,
+    "eps": 0.44,
+    "real_eps": 10.2,
+    "pe": 22.66,
+    "cape": 12.28,
+    "eps_growth": 7.32
+  },
+  {
+    "year": 1934,
+    "price": 9.26,
+    "eps": 0.49,
+    "real_eps": 11.19,
+    "pe": 18.9,
+    "cape": 11.64,
+    "eps_growth": 11.36
+  },
+  {
+    "year": 1935,
+    "price": 13.04,
+    "eps": 0.76,
+    "real_eps": 16.86,
+    "pe": 17.16,
+    "cape": 16.16,
+    "eps_growth": 55.1
+  },
+  {
+    "year": 1936,
+    "price": 17.06,
+    "eps": 1.02,
+    "real_eps": 22.3,
+    "pe": 16.73,
+    "cape": 21.13,
+    "eps_growth": 34.21
+  },
+  {
+    "year": 1937,
+    "price": 11.02,
+    "eps": 1.13,
+    "real_eps": 24.02,
+    "pe": 9.75,
+    "cape": 13.01,
+    "eps_growth": 10.78
+  },
+  {
+    "year": 1938,
+    "price": 12.69,
+    "eps": 0.64,
+    "real_eps": 13.99,
+    "pe": 19.83,
+    "cape": 15.76,
+    "eps_growth": -43.36
+  },
+  {
+    "year": 1939,
+    "price": 12.37,
+    "eps": 0.9,
+    "real_eps": 19.68,
+    "pe": 13.74,
+    "cape": 16.28,
+    "eps_growth": 40.62
+  },
+  {
+    "year": 1940,
+    "price": 10.53,
+    "eps": 1.05,
+    "real_eps": 22.8,
+    "pe": 10.03,
+    "cape": 13.91,
+    "eps_growth": 16.67
+  },
+  {
+    "year": 1941,
+    "price": 8.76,
+    "eps": 1.16,
+    "real_eps": 22.91,
+    "pe": 7.55,
+    "cape": 10.09,
+    "eps_growth": 10.48
+  },
+  {
+    "year": 1942,
+    "price": 9.52,
+    "eps": 1.03,
+    "real_eps": 18.66,
+    "pe": 9.24,
+    "cape": 9.62,
+    "eps_growth": -11.21
+  },
+  {
+    "year": 1943,
+    "price": 11.48,
+    "eps": 0.94,
+    "real_eps": 16.54,
+    "pe": 12.21,
+    "cape": 10.74,
+    "eps_growth": -8.74
+  },
+  {
+    "year": 1944,
+    "price": 13.1,
+    "eps": 0.93,
+    "real_eps": 15.99,
+    "pe": 14.09,
+    "cape": 11.64,
+    "eps_growth": -1.06
+  },
+  {
+    "year": 1945,
+    "price": 17.33,
+    "eps": 0.96,
+    "real_eps": 16.15,
+    "pe": 18.05,
+    "cape": 15.02,
+    "eps_growth": 3.23
+  },
+  {
+    "year": 1946,
+    "price": 15.13,
+    "eps": 1.06,
+    "real_eps": 15.09,
+    "pe": 14.27,
+    "cape": 11.37,
+    "eps_growth": 10.42
+  },
+  {
+    "year": 1947,
+    "price": 15.03,
+    "eps": 1.61,
+    "real_eps": 21.06,
+    "pe": 9.34,
+    "cape": 10.68,
+    "eps_growth": 51.89
+  },
+  {
+    "year": 1948,
+    "price": 15.19,
+    "eps": 2.29,
+    "real_eps": 29.09,
+    "pe": 6.63,
+    "cape": 10.16,
+    "eps_growth": 42.24
+  },
+  {
+    "year": 1949,
+    "price": 16.54,
+    "eps": 2.32,
+    "real_eps": 30.09,
+    "pe": 7.13,
+    "cape": 10.53,
+    "eps_growth": 1.31
+  },
+  {
+    "year": 1950,
+    "price": 19.75,
+    "eps": 2.84,
+    "real_eps": 34.78,
+    "pe": 6.95,
+    "cape": 11.31,
+    "eps_growth": 22.41
+  },
+  {
+    "year": 1951,
+    "price": 23.41,
+    "eps": 2.44,
+    "real_eps": 28.19,
+    "pe": 9.59,
+    "cape": 12.15,
+    "eps_growth": -14.08
+  },
+  {
+    "year": 1952,
+    "price": 26.04,
+    "eps": 2.4,
+    "real_eps": 27.52,
+    "pe": 10.85,
+    "cape": 12.93,
+    "eps_growth": -1.64
+  },
+  {
+    "year": 1953,
+    "price": 24.83,
+    "eps": 2.51,
+    "real_eps": 28.56,
+    "pe": 9.89,
+    "cape": 11.75,
+    "eps_growth": 4.58
+  },
+  {
+    "year": 1954,
+    "price": 34.97,
+    "eps": 2.77,
+    "real_eps": 31.76,
+    "pe": 12.62,
+    "cape": 15.79,
+    "eps_growth": 10.36
+  },
+  {
+    "year": 1955,
+    "price": 45.37,
+    "eps": 3.62,
+    "real_eps": 41.35,
+    "pe": 12.53,
+    "cape": 18.94,
+    "eps_growth": 30.69
+  },
+  {
+    "year": 1956,
+    "price": 46.44,
+    "eps": 3.41,
+    "real_eps": 37.82,
+    "pe": 13.62,
+    "cape": 17.2,
+    "eps_growth": -5.8
+  },
+  {
+    "year": 1957,
+    "price": 40.33,
+    "eps": 3.37,
+    "real_eps": 36.33,
+    "pe": 11.97,
+    "cape": 13.67,
+    "eps_growth": -1.17
+  },
+  {
+    "year": 1958,
+    "price": 53.49,
+    "eps": 2.89,
+    "real_eps": 30.61,
+    "pe": 18.51,
+    "cape": 17.36,
+    "eps_growth": -14.24
+  },
+  {
+    "year": 1959,
+    "price": 59.06,
+    "eps": 3.39,
+    "real_eps": 35.3,
+    "pe": 17.42,
+    "cape": 18.62,
+    "eps_growth": 17.3
+  },
+  {
+    "year": 1960,
+    "price": 56.8,
+    "eps": 3.27,
+    "real_eps": 33.59,
+    "pe": 17.37,
+    "cape": 17.56,
+    "eps_growth": -3.54
+  },
+  {
+    "year": 1961,
+    "price": 71.74,
+    "eps": 3.19,
+    "real_eps": 32.55,
+    "pe": 22.49,
+    "cape": 22.04,
+    "eps_growth": -2.45
+  },
+  {
+    "year": 1962,
+    "price": 62.64,
+    "eps": 3.67,
+    "real_eps": 36.96,
+    "pe": 17.07,
+    "cape": 18.59,
+    "eps_growth": 15.05
+  },
+  {
+    "year": 1963,
+    "price": 74.17,
+    "eps": 4.02,
+    "real_eps": 39.83,
+    "pe": 18.45,
+    "cape": 21.04,
+    "eps_growth": 9.54
+  },
+  {
+    "year": 1964,
+    "price": 83.96,
+    "eps": 4.55,
+    "real_eps": 44.64,
+    "pe": 18.45,
+    "cape": 22.75,
+    "eps_growth": 13.18
+  },
+  {
+    "year": 1965,
+    "price": 91.73,
+    "eps": 5.19,
+    "real_eps": 49.96,
+    "pe": 17.67,
+    "cape": 23.69,
+    "eps_growth": 14.07
+  },
+  {
+    "year": 1966,
+    "price": 81.33,
+    "eps": 5.55,
+    "real_eps": 51.64,
+    "pe": 14.65,
+    "cape": 19.74,
+    "eps_growth": 6.94
+  },
+  {
+    "year": 1967,
+    "price": 95.3,
+    "eps": 5.33,
+    "real_eps": 48.13,
+    "pe": 17.88,
+    "cape": 21.75,
+    "eps_growth": -3.96
+  },
+  {
+    "year": 1968,
+    "price": 106.5,
+    "eps": 5.76,
+    "real_eps": 49.67,
+    "pe": 18.49,
+    "cape": 22.28,
+    "eps_growth": 8.07
+  },
+  {
+    "year": 1969,
+    "price": 91.11,
+    "eps": 5.78,
+    "real_eps": 46.93,
+    "pe": 15.76,
+    "cape": 17.33,
+    "eps_growth": 0.35
+  },
+  {
+    "year": 1970,
+    "price": 90.05,
+    "eps": 5.13,
+    "real_eps": 39.46,
+    "pe": 17.55,
+    "cape": 15.87,
+    "eps_growth": -11.25
+  },
+  {
+    "year": 1971,
+    "price": 99.17,
+    "eps": 5.7,
+    "real_eps": 42.46,
+    "pe": 17.4,
+    "cape": 16.6,
+    "eps_growth": 11.11
+  },
+  {
+    "year": 1972,
+    "price": 117.5,
+    "eps": 6.42,
+    "real_eps": 46.24,
+    "pe": 18.3,
+    "cape": 18.65,
+    "eps_growth": 12.63
+  },
+  {
+    "year": 1973,
+    "price": 94.78,
+    "eps": 8.16,
+    "real_eps": 54.07,
+    "pe": 11.62,
+    "cape": 13.49,
+    "eps_growth": 27.1
+  },
+  {
+    "year": 1974,
+    "price": 67.07,
+    "eps": 8.89,
+    "real_eps": 52.44,
+    "pe": 7.54,
+    "cape": 8.29,
+    "eps_growth": 8.95
+  },
+  {
+    "year": 1975,
+    "price": 88.7,
+    "eps": 7.96,
+    "real_eps": 43.91,
+    "pe": 11.14,
+    "cape": 10.25,
+    "eps_growth": -10.46
+  },
+  {
+    "year": 1976,
+    "price": 104.7,
+    "eps": 9.91,
+    "real_eps": 52.13,
+    "pe": 10.57,
+    "cape": 11.6,
+    "eps_growth": 24.5
+  },
+  {
+    "year": 1977,
+    "price": 93.82,
+    "eps": 10.89,
+    "real_eps": 53.68,
+    "pe": 8.62,
+    "cape": 9.68,
+    "eps_growth": 9.89
+  },
+  {
+    "year": 1978,
+    "price": 96.11,
+    "eps": 12.33,
+    "real_eps": 55.75,
+    "pe": 7.79,
+    "cape": 9.01,
+    "eps_growth": 13.22
+  },
+  {
+    "year": 1979,
+    "price": 107.8,
+    "eps": 14.86,
+    "real_eps": 59.31,
+    "pe": 7.25,
+    "cape": 8.75,
+    "eps_growth": 20.52
+  },
+  {
+    "year": 1980,
+    "price": 133.5,
+    "eps": 14.82,
+    "real_eps": 52.57,
+    "pe": 9.01,
+    "cape": 9.39,
+    "eps_growth": -0.27
+  },
+  {
+    "year": 1981,
+    "price": 123.8,
+    "eps": 15.36,
+    "real_eps": 50.02,
+    "pe": 8.06,
+    "cape": 7.83,
+    "eps_growth": 3.64
+  },
+  {
+    "year": 1982,
+    "price": 139.4,
+    "eps": 12.64,
+    "real_eps": 39.65,
+    "pe": 11.03,
+    "cape": 8.47,
+    "eps_growth": -17.71
+  },
+  {
+    "year": 1983,
+    "price": 164.4,
+    "eps": 14.03,
+    "real_eps": 42.4,
+    "pe": 11.72,
+    "cape": 9.82,
+    "eps_growth": 11.0
+  },
+  {
+    "year": 1984,
+    "price": 164.5,
+    "eps": 16.64,
+    "real_eps": 48.38,
+    "pe": 9.89,
+    "cape": 9.6,
+    "eps_growth": 18.6
+  },
+  {
+    "year": 1985,
+    "price": 207.3,
+    "eps": 14.61,
+    "real_eps": 40.92,
+    "pe": 14.19,
+    "cape": 11.69,
+    "eps_growth": -12.2
+  },
+  {
+    "year": 1986,
+    "price": 248.6,
+    "eps": 14.48,
+    "real_eps": 40.12,
+    "pe": 17.17,
+    "cape": 14.09,
+    "eps_growth": -0.89
+  },
+  {
+    "year": 1987,
+    "price": 241.0,
+    "eps": 17.5,
+    "real_eps": 46.42,
+    "pe": 13.77,
+    "cape": 13.39,
+    "eps_growth": 20.86
+  },
+  {
+    "year": 1988,
+    "price": 276.5,
+    "eps": 23.75,
+    "real_eps": 60.34,
+    "pe": 11.64,
+    "cape": 14.7,
+    "eps_growth": 35.71
+  },
+  {
+    "year": 1989,
+    "price": 348.6,
+    "eps": 22.87,
+    "real_eps": 55.52,
+    "pe": 15.24,
+    "cape": 17.65,
+    "eps_growth": -3.71
+  },
+  {
+    "year": 1990,
+    "price": 328.75,
+    "eps": 21.34,
+    "real_eps": 48.82,
+    "pe": 15.41,
+    "cape": 15.85,
+    "eps_growth": -6.69
+  },
+  {
+    "year": 1991,
+    "price": 388.51,
+    "eps": 15.97,
+    "real_eps": 35.45,
+    "pe": 24.33,
+    "cape": 18.44,
+    "eps_growth": -25.16
+  },
+  {
+    "year": 1992,
+    "price": 435.64,
+    "eps": 19.09,
+    "real_eps": 41.18,
+    "pe": 22.82,
+    "cape": 20.45,
+    "eps_growth": 19.54
+  },
+  {
+    "year": 1993,
+    "price": 465.95,
+    "eps": 21.89,
+    "real_eps": 45.96,
+    "pe": 21.29,
+    "cape": 21.16,
+    "eps_growth": 14.67
+  },
+  {
+    "year": 1994,
+    "price": 455.19,
+    "eps": 30.6,
+    "real_eps": 62.58,
+    "pe": 14.88,
+    "cape": 19.91,
+    "eps_growth": 39.79
+  },
+  {
+    "year": 1995,
+    "price": 614.57,
+    "eps": 33.96,
+    "real_eps": 67.73,
+    "pe": 18.1,
+    "cape": 25.03,
+    "eps_growth": 10.98
+  },
+  {
+    "year": 1996,
+    "price": 743.25,
+    "eps": 38.73,
+    "real_eps": 74.76,
+    "pe": 19.19,
+    "cape": 27.72,
+    "eps_growth": 14.05
+  },
+  {
+    "year": 1997,
+    "price": 962.37,
+    "eps": 39.72,
+    "real_eps": 75.38,
+    "pe": 24.23,
+    "cape": 33.03,
+    "eps_growth": 2.56
+  },
+  {
+    "year": 1998,
+    "price": 1190.05,
+    "eps": 37.71,
+    "real_eps": 70.43,
+    "pe": 31.56,
+    "cape": 38.82,
+    "eps_growth": -5.06
+  },
+  {
+    "year": 1999,
+    "price": 1428.68,
+    "eps": 48.17,
+    "real_eps": 87.62,
+    "pe": 29.66,
+    "cape": 44.2,
+    "eps_growth": 27.74
+  },
+  {
+    "year": 2000,
+    "price": 1330.93,
+    "eps": 50.0,
+    "real_eps": 87.97,
+    "pe": 26.62,
+    "cape": 37.27,
+    "eps_growth": 3.8
+  },
+  {
+    "year": 2001,
+    "price": 1144.93,
+    "eps": 24.69,
+    "real_eps": 42.77,
+    "pe": 46.37,
+    "cape": 30.5,
+    "eps_growth": -50.62
+  },
+  {
+    "year": 2002,
+    "price": 899.18,
+    "eps": 27.59,
+    "real_eps": 46.69,
+    "pe": 32.59,
+    "cape": 23.1,
+    "eps_growth": 11.75
+  },
+  {
+    "year": 2003,
+    "price": 1080.64,
+    "eps": 48.74,
+    "real_eps": 80.96,
+    "pe": 22.17,
+    "cape": 26.64,
+    "eps_growth": 76.66
+  },
+  {
+    "year": 2004,
+    "price": 1199.21,
+    "eps": 58.55,
+    "real_eps": 94.19,
+    "pe": 20.48,
+    "cape": 27.14,
+    "eps_growth": 20.13
+  },
+  {
+    "year": 2005,
+    "price": 1262.07,
+    "eps": 69.83,
+    "real_eps": 108.62,
+    "pe": 18.07,
+    "cape": 26.44,
+    "eps_growth": 19.27
+  },
+  {
+    "year": 2006,
+    "price": 1416.42,
+    "eps": 81.51,
+    "real_eps": 123.65,
+    "pe": 17.38,
+    "cape": 27.28,
+    "eps_growth": 16.73
+  },
+  {
+    "year": 2007,
+    "price": 1479.22,
+    "eps": 66.18,
+    "real_eps": 96.46,
+    "pe": 22.35,
+    "cape": 25.96,
+    "eps_growth": -18.81
+  },
+  {
+    "year": 2008,
+    "price": 877.56,
+    "eps": 14.88,
+    "real_eps": 21.67,
+    "pe": 58.98,
+    "cape": 15.38,
+    "eps_growth": -77.52
+  },
+  {
+    "year": 2009,
+    "price": 1110.38,
+    "eps": 50.97,
+    "real_eps": 72.25,
+    "pe": 21.78,
+    "cape": 20.32,
+    "eps_growth": 242.54
+  },
+  {
+    "year": 2010,
+    "price": 1241.53,
+    "eps": 77.35,
+    "real_eps": 108.03,
+    "pe": 16.05,
+    "cape": 22.4,
+    "eps_growth": 51.76
+  },
+  {
+    "year": 2011,
+    "price": 1243.32,
+    "eps": 86.95,
+    "real_eps": 117.95,
+    "pe": 14.3,
+    "cape": 20.52,
+    "eps_growth": 12.41
+  },
+  {
+    "year": 2012,
+    "price": 1422.29,
+    "eps": 86.51,
+    "real_eps": 115.34,
+    "pe": 16.44,
+    "cape": 21.24,
+    "eps_growth": -0.51
+  },
+  {
+    "year": 2013,
+    "price": 1807.78,
+    "eps": 100.2,
+    "real_eps": 131.62,
+    "pe": 18.04,
+    "cape": 24.86,
+    "eps_growth": 15.82
+  },
+  {
+    "year": 2014,
+    "price": 2054.27,
+    "eps": 102.31,
+    "real_eps": 133.38,
+    "pe": 20.08,
+    "cape": 26.79,
+    "eps_growth": 2.11
+  },
+  {
+    "year": 2015,
+    "price": 2054.08,
+    "eps": 86.53,
+    "real_eps": 111.99,
+    "pe": 23.74,
+    "cape": 25.97,
+    "eps_growth": -15.42
+  },
+  {
+    "year": 2016,
+    "price": 2246.63,
+    "eps": 94.55,
+    "real_eps": 119.89,
+    "pe": 23.76,
+    "cape": 27.87,
+    "eps_growth": 9.27
+  },
+  {
+    "year": 2017,
+    "price": 2664.34,
+    "eps": 109.88,
+    "real_eps": 136.45,
+    "pe": 24.25,
+    "cape": 32.09,
+    "eps_growth": 16.21
+  },
+  {
+    "year": 2018,
+    "price": 2567.31,
+    "eps": 132.39,
+    "real_eps": 161.32,
+    "pe": 19.39,
+    "cape": 28.29,
+    "eps_growth": 20.49
+  },
+  {
+    "year": 2019,
+    "price": 3176.75,
+    "eps": 139.47,
+    "real_eps": 166.15,
+    "pe": 22.78,
+    "cape": 30.33,
+    "eps_growth": 5.35
+  },
+  {
+    "year": 2020,
+    "price": 3695.31,
+    "eps": 94.13,
+    "real_eps": 110.63,
+    "pe": 39.26,
+    "cape": 33.77,
+    "eps_growth": -32.51
+  },
+  {
+    "year": 2021,
+    "price": 4674.77,
+    "eps": 197.87,
+    "real_eps": 217.26,
+    "pe": 23.63,
+    "cape": 38.3,
+    "eps_growth": 110.21
+  },
+  {
+    "year": 2022,
+    "price": 3912.38,
+    "eps": 172.75,
+    "real_eps": 178.18,
+    "pe": 22.65,
+    "cape": 28.32,
+    "eps_growth": -12.7
+  },
+  {
+    "year": 2023,
+    "price": 4685.05,
+    "eps": 204.14,
+    "real_eps": null,
+    "pe": 22.95,
+    "cape": 31.45,
+    "eps_growth": 18.17
+  },
+  {
+    "year": 2024,
+    "price": 6010.91,
+    "eps": 216.7,
+    "real_eps": null,
+    "pe": 27.74,
+    "cape": 37.71,
+    "eps_growth": 6.15
+  }
+]
