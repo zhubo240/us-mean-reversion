@@ -1,0 +1,4187 @@
+[
+  {
+    "year": 1980,
+    "sectors": {
+      "Energy": {
+        "weight": 25.3,
+        "earnings_share": 26.95,
+        "earnings_M": 28310.7,
+        "mktcap_M": 231522.9,
+        "pe": 8.18,
+        "companies": 29
+      },
+      "Materials": {
+        "weight": 6.3,
+        "earnings_share": 8.44,
+        "earnings_M": 8866.2,
+        "mktcap_M": 57615.6,
+        "pe": 6.5,
+        "companies": 45
+      },
+      "Industrials": {
+        "weight": 13.88,
+        "earnings_share": 12.5,
+        "earnings_M": 13128.5,
+        "mktcap_M": 127038.8,
+        "pe": 9.68,
+        "companies": 86
+      },
+      "Cons Disc": {
+        "weight": 8.42,
+        "earnings_share": 2.62,
+        "earnings_M": 2756.3,
+        "mktcap_M": 77081.9,
+        "pe": 27.97,
+        "companies": 83
+      },
+      "Cons Staples": {
+        "weight": 7.14,
+        "earnings_share": 8.63,
+        "earnings_M": 9062.6,
+        "mktcap_M": 65321.9,
+        "pe": 7.21,
+        "companies": 51
+      },
+      "Health Care": {
+        "weight": 7.4,
+        "earnings_share": 5.33,
+        "earnings_M": 5600.8,
+        "mktcap_M": 67710.3,
+        "pe": 12.09,
+        "companies": 29
+      },
+      "Financials": {
+        "weight": 4.96,
+        "earnings_share": 7.01,
+        "earnings_M": 7365.8,
+        "mktcap_M": 45425.8,
+        "pe": 6.17,
+        "companies": 41
+      },
+      "Info Tech": {
+        "weight": 9.16,
+        "earnings_share": 7.02,
+        "earnings_M": 7377.8,
+        "mktcap_M": 83807.2,
+        "pe": 11.36,
+        "companies": 19
+      },
+      "Telecom": {
+        "weight": 5.1,
+        "earnings_share": 6.91,
+        "earnings_M": 7259.0,
+        "mktcap_M": 46684.9,
+        "pe": 6.43,
+        "companies": 8
+      },
+      "Utilities": {
+        "weight": 4.63,
+        "earnings_share": 6.7,
+        "earnings_M": 7041.3,
+        "mktcap_M": 42348.1,
+        "pe": 6.01,
+        "companies": 33
+      },
+      "Real Estate": {
+        "weight": 0.62,
+        "earnings_share": 0.38,
+        "earnings_M": 399.4,
+        "mktcap_M": 5679.3,
+        "pe": 14.22,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1981,
+    "sectors": {
+      "Energy": {
+        "weight": 21.64,
+        "earnings_share": 26.31,
+        "earnings_M": 29832.8,
+        "mktcap_M": 185927.1,
+        "pe": 6.23,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 6.25,
+        "earnings_share": 6.87,
+        "earnings_M": 7788.9,
+        "mktcap_M": 53743.9,
+        "pe": 6.9,
+        "companies": 46
+      },
+      "Industrials": {
+        "weight": 13.63,
+        "earnings_share": 12.52,
+        "earnings_M": 14188.2,
+        "mktcap_M": 117091.4,
+        "pe": 8.25,
+        "companies": 90
+      },
+      "Cons Disc": {
+        "weight": 9.37,
+        "earnings_share": 6.86,
+        "earnings_M": 7773.4,
+        "mktcap_M": 80485.1,
+        "pe": 10.35,
+        "companies": 84
+      },
+      "Cons Staples": {
+        "weight": 8.4,
+        "earnings_share": 8.61,
+        "earnings_M": 9761.2,
+        "mktcap_M": 72141.1,
+        "pe": 7.39,
+        "companies": 53
+      },
+      "Health Care": {
+        "weight": 8.31,
+        "earnings_share": 5.47,
+        "earnings_M": 6206.3,
+        "mktcap_M": 71373.7,
+        "pe": 11.5,
+        "companies": 30
+      },
+      "Financials": {
+        "weight": 5.41,
+        "earnings_share": 6.18,
+        "earnings_M": 7011.7,
+        "mktcap_M": 46518.8,
+        "pe": 6.63,
+        "companies": 40
+      },
+      "Info Tech": {
+        "weight": 9.22,
+        "earnings_share": 6.68,
+        "earnings_M": 7577.3,
+        "mktcap_M": 79184.1,
+        "pe": 10.45,
+        "companies": 24
+      },
+      "Telecom": {
+        "weight": 7.03,
+        "earnings_share": 7.44,
+        "earnings_M": 8437.8,
+        "mktcap_M": 60375.9,
+        "pe": 7.16,
+        "companies": 8
+      },
+      "Utilities": {
+        "weight": 5.23,
+        "earnings_share": 7.3,
+        "earnings_M": 8272.5,
+        "mktcap_M": 44934.5,
+        "pe": 5.43,
+        "companies": 33
+      },
+      "Real Estate": {
+        "weight": 0.59,
+        "earnings_share": 0.33,
+        "earnings_M": 372.3,
+        "mktcap_M": 5093.6,
+        "pe": 13.68,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1982,
+    "sectors": {
+      "Energy": {
+        "weight": 15.54,
+        "earnings_share": 23.56,
+        "earnings_M": 22349.4,
+        "mktcap_M": 156776.1,
+        "pe": 7.01,
+        "companies": 33
+      },
+      "Materials": {
+        "weight": 5.69,
+        "earnings_share": 0.18,
+        "earnings_M": 174.1,
+        "mktcap_M": 57406.4,
+        "pe": null,
+        "companies": 47
+      },
+      "Industrials": {
+        "weight": 13.96,
+        "earnings_share": 10.05,
+        "earnings_M": 9536.0,
+        "mktcap_M": 140780.4,
+        "pe": 14.76,
+        "companies": 97
+      },
+      "Cons Disc": {
+        "weight": 11.69,
+        "earnings_share": 7.89,
+        "earnings_M": 7488.3,
+        "mktcap_M": 117938.0,
+        "pe": 15.75,
+        "companies": 89
+      },
+      "Cons Staples": {
+        "weight": 9.32,
+        "earnings_share": 10.11,
+        "earnings_M": 9593.2,
+        "mktcap_M": 93969.8,
+        "pe": 9.8,
+        "companies": 54
+      },
+      "Health Care": {
+        "weight": 9.18,
+        "earnings_share": 7.88,
+        "earnings_M": 7475.1,
+        "mktcap_M": 92574.5,
+        "pe": 12.38,
+        "companies": 30
+      },
+      "Financials": {
+        "weight": 5.84,
+        "earnings_share": 6.96,
+        "earnings_M": 6600.1,
+        "mktcap_M": 58867.3,
+        "pe": 8.92,
+        "companies": 42
+      },
+      "Info Tech": {
+        "weight": 11.75,
+        "earnings_share": 9.1,
+        "earnings_M": 8635.8,
+        "mktcap_M": 118526.7,
+        "pe": 13.73,
+        "companies": 27
+      },
+      "Telecom": {
+        "weight": 7.46,
+        "earnings_share": 9.54,
+        "earnings_M": 9053.0,
+        "mktcap_M": 75242.4,
+        "pe": 8.31,
+        "companies": 9
+      },
+      "Utilities": {
+        "weight": 5.46,
+        "earnings_share": 9.83,
+        "earnings_M": 9325.7,
+        "mktcap_M": 55031.3,
+        "pe": 5.9,
+        "companies": 33
+      },
+      "Real Estate": {
+        "weight": 0.67,
+        "earnings_share": 0.3,
+        "earnings_M": 285.8,
+        "mktcap_M": 6710.1,
+        "pe": 23.48,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1983,
+    "sectors": {
+      "Energy": {
+        "weight": 14.95,
+        "earnings_share": 21.03,
+        "earnings_M": 21790.3,
+        "mktcap_M": 183284.4,
+        "pe": 8.41,
+        "companies": 33
+      },
+      "Materials": {
+        "weight": 6.26,
+        "earnings_share": 1.83,
+        "earnings_M": 1894.1,
+        "mktcap_M": 76749.4,
+        "pe": 40.52,
+        "companies": 49
+      },
+      "Industrials": {
+        "weight": 15.33,
+        "earnings_share": 10.81,
+        "earnings_M": 11199.0,
+        "mktcap_M": 187960.3,
+        "pe": 16.78,
+        "companies": 95
+      },
+      "Cons Disc": {
+        "weight": 12.71,
+        "earnings_share": 15.0,
+        "earnings_M": 15544.8,
+        "mktcap_M": 155753.0,
+        "pe": 10.02,
+        "companies": 92
+      },
+      "Cons Staples": {
+        "weight": 9.21,
+        "earnings_share": 10.78,
+        "earnings_M": 11173.3,
+        "mktcap_M": 112879.3,
+        "pe": 10.1,
+        "companies": 53
+      },
+      "Health Care": {
+        "weight": 7.72,
+        "earnings_share": 7.35,
+        "earnings_M": 7613.6,
+        "mktcap_M": 94613.9,
+        "pe": 12.43,
+        "companies": 29
+      },
+      "Financials": {
+        "weight": 5.78,
+        "earnings_share": 8.17,
+        "earnings_M": 8461.5,
+        "mktcap_M": 70824.6,
+        "pe": 8.37,
+        "companies": 44
+      },
+      "Info Tech": {
+        "weight": 12.56,
+        "earnings_share": 8.92,
+        "earnings_M": 9237.8,
+        "mktcap_M": 154009.4,
+        "pe": 16.67,
+        "companies": 27
+      },
+      "Telecom": {
+        "weight": 6.49,
+        "earnings_share": 2.11,
+        "earnings_M": 2187.1,
+        "mktcap_M": 79605.8,
+        "pe": 36.4,
+        "companies": 9
+      },
+      "Utilities": {
+        "weight": 5.43,
+        "earnings_share": 10.73,
+        "earnings_M": 11114.5,
+        "mktcap_M": 66566.5,
+        "pe": 5.99,
+        "companies": 35
+      },
+      "Real Estate": {
+        "weight": 0.57,
+        "earnings_share": 0.35,
+        "earnings_M": 360.6,
+        "mktcap_M": 6944.4,
+        "pe": 19.26,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1984,
+    "sectors": {
+      "Energy": {
+        "weight": 15.6,
+        "earnings_share": 18.76,
+        "earnings_M": 23485.1,
+        "mktcap_M": 190157.7,
+        "pe": 8.1,
+        "companies": 35
+      },
+      "Materials": {
+        "weight": 5.55,
+        "earnings_share": 3.17,
+        "earnings_M": 3967.7,
+        "mktcap_M": 67658.0,
+        "pe": 17.05,
+        "companies": 49
+      },
+      "Industrials": {
+        "weight": 14.59,
+        "earnings_share": 13.25,
+        "earnings_M": 16587.7,
+        "mktcap_M": 177823.2,
+        "pe": 10.72,
+        "companies": 96
+      },
+      "Cons Disc": {
+        "weight": 12.74,
+        "earnings_share": 16.36,
+        "earnings_M": 20483.2,
+        "mktcap_M": 155226.4,
+        "pe": 7.58,
+        "companies": 98
+      },
+      "Cons Staples": {
+        "weight": 10.4,
+        "earnings_share": 9.81,
+        "earnings_M": 12284.8,
+        "mktcap_M": 126705.6,
+        "pe": 10.31,
+        "companies": 55
+      },
+      "Health Care": {
+        "weight": 7.86,
+        "earnings_share": 6.0,
+        "earnings_M": 7507.9,
+        "mktcap_M": 95805.8,
+        "pe": 12.76,
+        "companies": 29
+      },
+      "Financials": {
+        "weight": 6.26,
+        "earnings_share": 5.5,
+        "earnings_M": 6881.5,
+        "mktcap_M": 76347.3,
+        "pe": 11.09,
+        "companies": 45
+      },
+      "Info Tech": {
+        "weight": 12.49,
+        "earnings_share": 9.28,
+        "earnings_M": 11614.0,
+        "mktcap_M": 152275.9,
+        "pe": 13.11,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 7.54,
+        "earnings_share": 7.84,
+        "earnings_M": 9820.5,
+        "mktcap_M": 91873.0,
+        "pe": 9.36,
+        "companies": 14
+      },
+      "Utilities": {
+        "weight": 6.01,
+        "earnings_share": 9.32,
+        "earnings_M": 11670.1,
+        "mktcap_M": 73242.0,
+        "pe": 6.28,
+        "companies": 31
+      },
+      "Real Estate": {
+        "weight": 0.51,
+        "earnings_share": 0.33,
+        "earnings_M": 415.6,
+        "mktcap_M": 6177.5,
+        "pe": 14.86,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1985,
+    "sectors": {
+      "Energy": {
+        "weight": 12.22,
+        "earnings_share": 15.62,
+        "earnings_M": 16642.7,
+        "mktcap_M": 181834.5,
+        "pe": 10.93,
+        "companies": 37
+      },
+      "Materials": {
+        "weight": 6.16,
+        "earnings_share": 0.63,
+        "earnings_M": 668.9,
+        "mktcap_M": 91708.8,
+        "pe": 137.1,
+        "companies": 53
+      },
+      "Industrials": {
+        "weight": 15.58,
+        "earnings_share": 13.57,
+        "earnings_M": 14451.6,
+        "mktcap_M": 231788.6,
+        "pe": 16.04,
+        "companies": 101
+      },
+      "Cons Disc": {
+        "weight": 12.87,
+        "earnings_share": 16.14,
+        "earnings_M": 17191.6,
+        "mktcap_M": 191459.4,
+        "pe": 11.14,
+        "companies": 96
+      },
+      "Cons Staples": {
+        "weight": 10.86,
+        "earnings_share": 11.84,
+        "earnings_M": 12610.4,
+        "mktcap_M": 161558.0,
+        "pe": 12.81,
+        "companies": 56
+      },
+      "Health Care": {
+        "weight": 8.43,
+        "earnings_share": 5.88,
+        "earnings_M": 6258.6,
+        "mktcap_M": 125432.0,
+        "pe": 20.04,
+        "companies": 29
+      },
+      "Financials": {
+        "weight": 7.19,
+        "earnings_share": 9.22,
+        "earnings_M": 9822.9,
+        "mktcap_M": 107022.2,
+        "pe": 10.9,
+        "companies": 44
+      },
+      "Info Tech": {
+        "weight": 11.82,
+        "earnings_share": 8.3,
+        "earnings_M": 8841.1,
+        "mktcap_M": 175905.2,
+        "pe": 19.9,
+        "companies": 35
+      },
+      "Telecom": {
+        "weight": 8.22,
+        "earnings_share": 9.07,
+        "earnings_M": 9665.2,
+        "mktcap_M": 122315.9,
+        "pe": 12.66,
+        "companies": 15
+      },
+      "Utilities": {
+        "weight": 6.14,
+        "earnings_share": 9.36,
+        "earnings_M": 9970.0,
+        "mktcap_M": 91366.3,
+        "pe": 9.16,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 0.49,
+        "earnings_share": 0.38,
+        "earnings_M": 405.2,
+        "mktcap_M": 7343.3,
+        "pe": 18.12,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1986,
+    "sectors": {
+      "Energy": {
+        "weight": 11.89,
+        "earnings_share": 5.76,
+        "earnings_M": 5947.0,
+        "mktcap_M": 203760.5,
+        "pe": 34.26,
+        "companies": 34
+      },
+      "Materials": {
+        "weight": 6.09,
+        "earnings_share": 2.88,
+        "earnings_M": 2968.6,
+        "mktcap_M": 104401.0,
+        "pe": 35.17,
+        "companies": 49
+      },
+      "Industrials": {
+        "weight": 14.92,
+        "earnings_share": 10.99,
+        "earnings_M": 11343.5,
+        "mktcap_M": 255747.8,
+        "pe": 22.55,
+        "companies": 102
+      },
+      "Cons Disc": {
+        "weight": 13.28,
+        "earnings_share": 18.37,
+        "earnings_M": 18960.5,
+        "mktcap_M": 227567.4,
+        "pe": 12.0,
+        "companies": 100
+      },
+      "Cons Staples": {
+        "weight": 12.31,
+        "earnings_share": 12.13,
+        "earnings_M": 12516.3,
+        "mktcap_M": 210895.1,
+        "pe": 16.85,
+        "companies": 55
+      },
+      "Health Care": {
+        "weight": 9.61,
+        "earnings_share": 9.28,
+        "earnings_M": 9574.6,
+        "mktcap_M": 164701.9,
+        "pe": 17.2,
+        "companies": 34
+      },
+      "Financials": {
+        "weight": 6.88,
+        "earnings_share": 12.3,
+        "earnings_M": 12696.2,
+        "mktcap_M": 117943.3,
+        "pe": 9.29,
+        "companies": 44
+      },
+      "Info Tech": {
+        "weight": 9.47,
+        "earnings_share": 7.45,
+        "earnings_M": 7695.1,
+        "mktcap_M": 162271.0,
+        "pe": 21.09,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 8.76,
+        "earnings_share": 9.76,
+        "earnings_M": 10073.5,
+        "mktcap_M": 150108.4,
+        "pe": 14.9,
+        "companies": 16
+      },
+      "Utilities": {
+        "weight": 6.23,
+        "earnings_share": 10.57,
+        "earnings_M": 10908.1,
+        "mktcap_M": 106800.8,
+        "pe": 9.79,
+        "companies": 31
+      },
+      "Real Estate": {
+        "weight": 0.55,
+        "earnings_share": 0.52,
+        "earnings_M": 538.3,
+        "mktcap_M": 9484.4,
+        "pe": 17.62,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1987,
+    "sectors": {
+      "Energy": {
+        "weight": 11.63,
+        "earnings_share": 6.8,
+        "earnings_M": 8588.3,
+        "mktcap_M": 206675.1,
+        "pe": 24.06,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 7.47,
+        "earnings_share": 9.02,
+        "earnings_M": 11389.3,
+        "mktcap_M": 132653.1,
+        "pe": 11.65,
+        "companies": 52
+      },
+      "Industrials": {
+        "weight": 15.3,
+        "earnings_share": 15.73,
+        "earnings_M": 19873.8,
+        "mktcap_M": 271917.0,
+        "pe": 13.68,
+        "companies": 106
+      },
+      "Cons Disc": {
+        "weight": 12.24,
+        "earnings_share": 18.0,
+        "earnings_M": 22737.1,
+        "mktcap_M": 217526.3,
+        "pe": 9.57,
+        "companies": 98
+      },
+      "Cons Staples": {
+        "weight": 12.98,
+        "earnings_share": 11.96,
+        "earnings_M": 15110.2,
+        "mktcap_M": 230618.1,
+        "pe": 15.26,
+        "companies": 53
+      },
+      "Health Care": {
+        "weight": 9.48,
+        "earnings_share": 8.89,
+        "earnings_M": 11228.0,
+        "mktcap_M": 168500.3,
+        "pe": 15.01,
+        "companies": 34
+      },
+      "Financials": {
+        "weight": 5.68,
+        "earnings_share": 0.54,
+        "earnings_M": 677.6,
+        "mktcap_M": 100832.1,
+        "pe": 148.8,
+        "companies": 46
+      },
+      "Info Tech": {
+        "weight": 10.55,
+        "earnings_share": 9.49,
+        "earnings_M": 11991.0,
+        "mktcap_M": 187495.2,
+        "pe": 15.64,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 8.76,
+        "earnings_share": 10.13,
+        "earnings_M": 12801.2,
+        "mktcap_M": 155595.2,
+        "pe": 12.15,
+        "companies": 17
+      },
+      "Utilities": {
+        "weight": 5.37,
+        "earnings_share": 8.85,
+        "earnings_M": 11182.7,
+        "mktcap_M": 95328.6,
+        "pe": 8.52,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 0.54,
+        "earnings_share": 0.6,
+        "earnings_M": 757.2,
+        "mktcap_M": 9581.5,
+        "pe": 12.65,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1988,
+    "sectors": {
+      "Energy": {
+        "weight": 11.89,
+        "earnings_share": 12.28,
+        "earnings_M": 21665.2,
+        "mktcap_M": 225253.7,
+        "pe": 10.4,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 6.92,
+        "earnings_share": 10.13,
+        "earnings_M": 17864.1,
+        "mktcap_M": 131125.3,
+        "pe": 7.34,
+        "companies": 48
+      },
+      "Industrials": {
+        "weight": 14.65,
+        "earnings_share": 13.6,
+        "earnings_M": 23983.8,
+        "mktcap_M": 277620.1,
+        "pe": 11.58,
+        "companies": 102
+      },
+      "Cons Disc": {
+        "weight": 12.86,
+        "earnings_share": 14.9,
+        "earnings_M": 26282.5,
+        "mktcap_M": 243666.8,
+        "pe": 9.27,
+        "companies": 92
+      },
+      "Cons Staples": {
+        "weight": 12.07,
+        "earnings_share": 10.04,
+        "earnings_M": 17712.5,
+        "mktcap_M": 228705.5,
+        "pe": 12.91,
+        "companies": 49
+      },
+      "Health Care": {
+        "weight": 9.62,
+        "earnings_share": 7.33,
+        "earnings_M": 12934.7,
+        "mktcap_M": 182178.6,
+        "pe": 14.08,
+        "companies": 37
+      },
+      "Financials": {
+        "weight": 7.78,
+        "earnings_share": 11.7,
+        "earnings_M": 20636.7,
+        "mktcap_M": 147340.4,
+        "pe": 7.14,
+        "companies": 56
+      },
+      "Info Tech": {
+        "weight": 9.25,
+        "earnings_share": 8.07,
+        "earnings_M": 14234.2,
+        "mktcap_M": 175203.5,
+        "pe": 12.31,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 8.95,
+        "earnings_share": 5.76,
+        "earnings_M": 10162.7,
+        "mktcap_M": 169642.9,
+        "pe": 16.69,
+        "companies": 17
+      },
+      "Utilities": {
+        "weight": 5.51,
+        "earnings_share": 5.67,
+        "earnings_M": 10006.8,
+        "mktcap_M": 104380.4,
+        "pe": 10.43,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 0.5,
+        "earnings_share": 0.52,
+        "earnings_M": 908.8,
+        "mktcap_M": 9388.2,
+        "pe": 10.33,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1989,
+    "sectors": {
+      "Energy": {
+        "weight": 12.49,
+        "earnings_share": 11.92,
+        "earnings_M": 19456.4,
+        "mktcap_M": 296994.3,
+        "pe": 15.26,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 6.66,
+        "earnings_share": 10.09,
+        "earnings_M": 16470.8,
+        "mktcap_M": 158211.0,
+        "pe": 9.61,
+        "companies": 50
+      },
+      "Industrials": {
+        "weight": 13.7,
+        "earnings_share": 15.17,
+        "earnings_M": 24765.8,
+        "mktcap_M": 325590.5,
+        "pe": 13.15,
+        "companies": 99
+      },
+      "Cons Disc": {
+        "weight": 11.15,
+        "earnings_share": 13.89,
+        "earnings_M": 22678.1,
+        "mktcap_M": 265187.0,
+        "pe": 11.69,
+        "companies": 92
+      },
+      "Cons Staples": {
+        "weight": 13.03,
+        "earnings_share": 10.41,
+        "earnings_M": 16991.1,
+        "mktcap_M": 309849.6,
+        "pe": 18.24,
+        "companies": 48
+      },
+      "Health Care": {
+        "weight": 9.94,
+        "earnings_share": 7.98,
+        "earnings_M": 13030.1,
+        "mktcap_M": 236373.5,
+        "pe": 18.14,
+        "companies": 36
+      },
+      "Financials": {
+        "weight": 8.5,
+        "earnings_share": 7.92,
+        "earnings_M": 12927.7,
+        "mktcap_M": 202147.8,
+        "pe": 15.64,
+        "companies": 60
+      },
+      "Info Tech": {
+        "weight": 6.65,
+        "earnings_share": 5.56,
+        "earnings_M": 9084.6,
+        "mktcap_M": 158073.9,
+        "pe": 17.4,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 11.35,
+        "earnings_share": 9.12,
+        "earnings_M": 14893.7,
+        "mktcap_M": 269759.4,
+        "pe": 18.11,
+        "companies": 18
+      },
+      "Utilities": {
+        "weight": 6.1,
+        "earnings_share": 7.54,
+        "earnings_M": 12306.0,
+        "mktcap_M": 144986.5,
+        "pe": 11.78,
+        "companies": 36
+      },
+      "Real Estate": {
+        "weight": 0.43,
+        "earnings_share": 0.4,
+        "earnings_M": 654.8,
+        "mktcap_M": 10147.8,
+        "pe": 15.5,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1990,
+    "sectors": {
+      "Energy": {
+        "weight": 13.26,
+        "earnings_share": 14.58,
+        "earnings_M": 21643.0,
+        "mktcap_M": 293406.6,
+        "pe": 13.56,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 6.04,
+        "earnings_share": 7.85,
+        "earnings_M": 11650.9,
+        "mktcap_M": 133669.4,
+        "pe": 11.47,
+        "companies": 51
+      },
+      "Industrials": {
+        "weight": 12.73,
+        "earnings_share": 13.8,
+        "earnings_M": 20490.0,
+        "mktcap_M": 281842.9,
+        "pe": 13.76,
+        "companies": 97
+      },
+      "Cons Disc": {
+        "weight": 9.81,
+        "earnings_share": 6.41,
+        "earnings_M": 9519.1,
+        "mktcap_M": 217109.6,
+        "pe": 22.81,
+        "companies": 91
+      },
+      "Cons Staples": {
+        "weight": 15.75,
+        "earnings_share": 13.43,
+        "earnings_M": 19929.9,
+        "mktcap_M": 348669.7,
+        "pe": 17.49,
+        "companies": 47
+      },
+      "Health Care": {
+        "weight": 11.67,
+        "earnings_share": 9.73,
+        "earnings_M": 14443.6,
+        "mktcap_M": 258236.8,
+        "pe": 17.88,
+        "companies": 35
+      },
+      "Financials": {
+        "weight": 7.36,
+        "earnings_share": 10.32,
+        "earnings_M": 15326.2,
+        "mktcap_M": 162821.1,
+        "pe": 10.62,
+        "companies": 60
+      },
+      "Info Tech": {
+        "weight": 7.06,
+        "earnings_share": 6.81,
+        "earnings_M": 10113.0,
+        "mktcap_M": 156342.6,
+        "pe": 15.46,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 9.88,
+        "earnings_share": 9.52,
+        "earnings_M": 14135.8,
+        "mktcap_M": 218716.1,
+        "pe": 15.47,
+        "companies": 18
+      },
+      "Utilities": {
+        "weight": 6.16,
+        "earnings_share": 7.18,
+        "earnings_M": 10652.5,
+        "mktcap_M": 136307.9,
+        "pe": 12.8,
+        "companies": 35
+      },
+      "Real Estate": {
+        "weight": 0.28,
+        "earnings_share": 0.36,
+        "earnings_M": 539.3,
+        "mktcap_M": 6222.8,
+        "pe": 11.54,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1991,
+    "sectors": {
+      "Energy": {
+        "weight": 10.78,
+        "earnings_share": 16.41,
+        "earnings_M": 17170.5,
+        "mktcap_M": 300119.8,
+        "pe": 17.48,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 6.07,
+        "earnings_share": 3.85,
+        "earnings_M": 4028.0,
+        "mktcap_M": 168957.0,
+        "pe": 41.95,
+        "companies": 52
+      },
+      "Industrials": {
+        "weight": 12.86,
+        "earnings_share": 9.72,
+        "earnings_M": 10169.6,
+        "mktcap_M": 358258.4,
+        "pe": 35.23,
+        "companies": 95
+      },
+      "Cons Disc": {
+        "weight": 10.13,
+        "earnings_share": 0.3,
+        "earnings_M": 313.3,
+        "mktcap_M": 282029.0,
+        "pe": null,
+        "companies": 89
+      },
+      "Cons Staples": {
+        "weight": 16.75,
+        "earnings_share": 20.44,
+        "earnings_M": 21382.7,
+        "mktcap_M": 466467.5,
+        "pe": 21.82,
+        "companies": 49
+      },
+      "Health Care": {
+        "weight": 13.38,
+        "earnings_share": 14.88,
+        "earnings_M": 15569.7,
+        "mktcap_M": 372623.6,
+        "pe": 23.93,
+        "companies": 34
+      },
+      "Financials": {
+        "weight": 8.69,
+        "earnings_share": 16.24,
+        "earnings_M": 16984.3,
+        "mktcap_M": 241919.0,
+        "pe": 14.24,
+        "companies": 58
+      },
+      "Info Tech": {
+        "weight": 6.03,
+        "earnings_share": -0.94,
+        "earnings_M": -984.9,
+        "mktcap_M": 167884.1,
+        "pe": null,
+        "companies": 35
+      },
+      "Telecom": {
+        "weight": 9.12,
+        "earnings_share": 9.31,
+        "earnings_M": 9734.6,
+        "mktcap_M": 254016.7,
+        "pe": 26.09,
+        "companies": 17
+      },
+      "Utilities": {
+        "weight": 5.91,
+        "earnings_share": 9.81,
+        "earnings_M": 10262.5,
+        "mktcap_M": 164660.4,
+        "pe": 16.04,
+        "companies": 37
+      },
+      "Real Estate": {
+        "weight": 0.3,
+        "earnings_share": -0.02,
+        "earnings_M": -24.1,
+        "mktcap_M": 8260.3,
+        "pe": null,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1992,
+    "sectors": {
+      "Energy": {
+        "weight": 9.86,
+        "earnings_share": 19.94,
+        "earnings_M": 11092.0,
+        "mktcap_M": 294477.3,
+        "pe": 26.55,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 6.18,
+        "earnings_share": -17.37,
+        "earnings_M": -9663.2,
+        "mktcap_M": 184452.2,
+        "pe": null,
+        "companies": 53
+      },
+      "Industrials": {
+        "weight": 12.89,
+        "earnings_share": 6.28,
+        "earnings_M": 3493.8,
+        "mktcap_M": 384959.6,
+        "pe": 110.18,
+        "companies": 96
+      },
+      "Cons Disc": {
+        "weight": 11.31,
+        "earnings_share": -52.69,
+        "earnings_M": -29310.9,
+        "mktcap_M": 337772.8,
+        "pe": null,
+        "companies": 86
+      },
+      "Cons Staples": {
+        "weight": 16.58,
+        "earnings_share": 40.52,
+        "earnings_M": 22540.9,
+        "mktcap_M": 495220.1,
+        "pe": 21.97,
+        "companies": 48
+      },
+      "Health Care": {
+        "weight": 10.89,
+        "earnings_share": 26.72,
+        "earnings_M": 14863.5,
+        "mktcap_M": 325292.7,
+        "pe": 21.89,
+        "companies": 37
+      },
+      "Financials": {
+        "weight": 10.71,
+        "earnings_share": 40.82,
+        "earnings_M": 22710.7,
+        "mktcap_M": 319841.1,
+        "pe": 14.08,
+        "companies": 59
+      },
+      "Info Tech": {
+        "weight": 5.68,
+        "earnings_share": -5.68,
+        "earnings_M": -3157.4,
+        "mktcap_M": 169548.4,
+        "pe": null,
+        "companies": 36
+      },
+      "Telecom": {
+        "weight": 9.86,
+        "earnings_share": 19.27,
+        "earnings_M": 10720.1,
+        "mktcap_M": 294448.2,
+        "pe": 27.47,
+        "companies": 18
+      },
+      "Utilities": {
+        "weight": 5.67,
+        "earnings_share": 21.22,
+        "earnings_M": 11804.4,
+        "mktcap_M": 169187.9,
+        "pe": 14.33,
+        "companies": 37
+      },
+      "Real Estate": {
+        "weight": 0.37,
+        "earnings_share": 0.96,
+        "earnings_M": 536.0,
+        "mktcap_M": 10964.9,
+        "pe": 20.46,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1993,
+    "sectors": {
+      "Energy": {
+        "weight": 10.07,
+        "earnings_share": 13.18,
+        "earnings_M": 16288.6,
+        "mktcap_M": 333951.2,
+        "pe": 20.5,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 6.32,
+        "earnings_share": 1.74,
+        "earnings_M": 2152.5,
+        "mktcap_M": 209674.7,
+        "pe": 97.41,
+        "companies": 52
+      },
+      "Industrials": {
+        "weight": 13.45,
+        "earnings_share": 14.59,
+        "earnings_M": 18034.5,
+        "mktcap_M": 445922.8,
+        "pe": 24.73,
+        "companies": 93
+      },
+      "Cons Disc": {
+        "weight": 12.63,
+        "earnings_share": 11.68,
+        "earnings_M": 14434.0,
+        "mktcap_M": 418808.3,
+        "pe": 29.02,
+        "companies": 86
+      },
+      "Cons Staples": {
+        "weight": 14.02,
+        "earnings_share": 15.57,
+        "earnings_M": 19241.7,
+        "mktcap_M": 464725.0,
+        "pe": 24.15,
+        "companies": 49
+      },
+      "Health Care": {
+        "weight": 9.23,
+        "earnings_share": 10.02,
+        "earnings_M": 12387.3,
+        "mktcap_M": 306141.9,
+        "pe": 24.71,
+        "companies": 38
+      },
+      "Financials": {
+        "weight": 11.08,
+        "earnings_share": 29.61,
+        "earnings_M": 36603.4,
+        "mktcap_M": 367431.9,
+        "pe": 10.04,
+        "companies": 60
+      },
+      "Info Tech": {
+        "weight": 6.59,
+        "earnings_share": -3.37,
+        "earnings_M": -4165.8,
+        "mktcap_M": 218623.7,
+        "pe": null,
+        "companies": 35
+      },
+      "Telecom": {
+        "weight": 10.6,
+        "earnings_share": -4.02,
+        "earnings_M": -4965.0,
+        "mktcap_M": 351423.9,
+        "pe": null,
+        "companies": 20
+      },
+      "Utilities": {
+        "weight": 5.63,
+        "earnings_share": 10.49,
+        "earnings_M": 12963.5,
+        "mktcap_M": 186718.7,
+        "pe": 14.4,
+        "companies": 37
+      },
+      "Real Estate": {
+        "weight": 0.35,
+        "earnings_share": 0.51,
+        "earnings_M": 636.0,
+        "mktcap_M": 11711.6,
+        "pe": 18.42,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 1994,
+    "sectors": {
+      "Energy": {
+        "weight": 10.01,
+        "earnings_share": 7.54,
+        "earnings_M": 16682.5,
+        "mktcap_M": 335765.2,
+        "pe": 20.13,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 6.82,
+        "earnings_share": 5.41,
+        "earnings_M": 11963.7,
+        "mktcap_M": 228700.4,
+        "pe": 19.12,
+        "companies": 55
+      },
+      "Industrials": {
+        "weight": 12.39,
+        "earnings_share": 11.38,
+        "earnings_M": 25170.1,
+        "mktcap_M": 415683.9,
+        "pe": 16.51,
+        "companies": 89
+      },
+      "Cons Disc": {
+        "weight": 11.2,
+        "earnings_share": 13.97,
+        "earnings_M": 30896.2,
+        "mktcap_M": 375516.9,
+        "pe": 12.15,
+        "companies": 85
+      },
+      "Cons Staples": {
+        "weight": 14.71,
+        "earnings_share": 12.89,
+        "earnings_M": 28494.3,
+        "mktcap_M": 493458.1,
+        "pe": 17.32,
+        "companies": 49
+      },
+      "Health Care": {
+        "weight": 9.91,
+        "earnings_share": 9.97,
+        "earnings_M": 22044.4,
+        "mktcap_M": 332434.2,
+        "pe": 15.08,
+        "companies": 37
+      },
+      "Financials": {
+        "weight": 10.7,
+        "earnings_share": 17.97,
+        "earnings_M": 39742.9,
+        "mktcap_M": 358914.3,
+        "pe": 9.03,
+        "companies": 62
+      },
+      "Info Tech": {
+        "weight": 9.05,
+        "earnings_share": 6.83,
+        "earnings_M": 15109.5,
+        "mktcap_M": 303354.6,
+        "pe": 20.08,
+        "companies": 39
+      },
+      "Telecom": {
+        "weight": 10.29,
+        "earnings_share": 7.45,
+        "earnings_M": 16462.6,
+        "mktcap_M": 345131.5,
+        "pe": 20.96,
+        "companies": 21
+      },
+      "Utilities": {
+        "weight": 4.65,
+        "earnings_share": 6.29,
+        "earnings_M": 13908.6,
+        "mktcap_M": 155999.1,
+        "pe": 11.22,
+        "companies": 37
+      },
+      "Real Estate": {
+        "weight": 0.26,
+        "earnings_share": 0.29,
+        "earnings_M": 638.0,
+        "mktcap_M": 8799.3,
+        "pe": 13.79,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 1995,
+    "sectors": {
+      "Energy": {
+        "weight": 9.17,
+        "earnings_share": 8.64,
+        "earnings_M": 21445.8,
+        "mktcap_M": 421138.1,
+        "pe": 19.64,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 5.55,
+        "earnings_share": 8.1,
+        "earnings_M": 20113.3,
+        "mktcap_M": 255122.6,
+        "pe": 12.68,
+        "companies": 54
+      },
+      "Industrials": {
+        "weight": 11.8,
+        "earnings_share": 11.3,
+        "earnings_M": 28057.4,
+        "mktcap_M": 541966.7,
+        "pe": 19.32,
+        "companies": 84
+      },
+      "Cons Disc": {
+        "weight": 9.67,
+        "earnings_share": 13.58,
+        "earnings_M": 33722.6,
+        "mktcap_M": 444086.7,
+        "pe": 13.17,
+        "companies": 87
+      },
+      "Cons Staples": {
+        "weight": 13.82,
+        "earnings_share": 12.37,
+        "earnings_M": 30717.7,
+        "mktcap_M": 634644.1,
+        "pe": 20.66,
+        "companies": 47
+      },
+      "Health Care": {
+        "weight": 11.91,
+        "earnings_share": 9.49,
+        "earnings_M": 23566.6,
+        "mktcap_M": 547081.6,
+        "pe": 23.21,
+        "companies": 39
+      },
+      "Financials": {
+        "weight": 13.06,
+        "earnings_share": 21.03,
+        "earnings_M": 52209.5,
+        "mktcap_M": 599616.8,
+        "pe": 11.48,
+        "companies": 64
+      },
+      "Info Tech": {
+        "weight": 10.29,
+        "earnings_share": 8.49,
+        "earnings_M": 21085.5,
+        "mktcap_M": 472504.0,
+        "pe": 22.41,
+        "companies": 41
+      },
+      "Telecom": {
+        "weight": 10.09,
+        "earnings_share": 0.29,
+        "earnings_M": 722.3,
+        "mktcap_M": 463516.4,
+        "pe": null,
+        "companies": 21
+      },
+      "Utilities": {
+        "weight": 4.43,
+        "earnings_share": 6.32,
+        "earnings_M": 15694.3,
+        "mktcap_M": 203358.7,
+        "pe": 12.96,
+        "companies": 38
+      },
+      "Real Estate": {
+        "weight": 0.21,
+        "earnings_share": 0.37,
+        "earnings_M": 907.5,
+        "mktcap_M": 9755.3,
+        "pe": 10.75,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 1996,
+    "sectors": {
+      "Energy": {
+        "weight": 9.31,
+        "earnings_share": 10.46,
+        "earnings_M": 32130.9,
+        "mktcap_M": 522318.5,
+        "pe": 16.26,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 5.19,
+        "earnings_share": 6.66,
+        "earnings_M": 20452.3,
+        "mktcap_M": 291237.1,
+        "pe": 14.24,
+        "companies": 55
+      },
+      "Industrials": {
+        "weight": 12.34,
+        "earnings_share": 11.16,
+        "earnings_M": 34283.1,
+        "mktcap_M": 691985.1,
+        "pe": 20.18,
+        "companies": 83
+      },
+      "Cons Disc": {
+        "weight": 8.77,
+        "earnings_share": 9.3,
+        "earnings_M": 28558.3,
+        "mktcap_M": 491973.3,
+        "pe": 17.23,
+        "companies": 80
+      },
+      "Cons Staples": {
+        "weight": 14.08,
+        "earnings_share": 11.49,
+        "earnings_M": 35292.1,
+        "mktcap_M": 789640.3,
+        "pe": 22.37,
+        "companies": 46
+      },
+      "Health Care": {
+        "weight": 11.47,
+        "earnings_share": 8.77,
+        "earnings_M": 26938.5,
+        "mktcap_M": 642970.8,
+        "pe": 23.87,
+        "companies": 39
+      },
+      "Financials": {
+        "weight": 14.45,
+        "earnings_share": 19.29,
+        "earnings_M": 59254.5,
+        "mktcap_M": 810093.6,
+        "pe": 13.67,
+        "companies": 66
+      },
+      "Info Tech": {
+        "weight": 12.27,
+        "earnings_share": 8.98,
+        "earnings_M": 27584.5,
+        "mktcap_M": 688237.8,
+        "pe": 24.95,
+        "companies": 47
+      },
+      "Telecom": {
+        "weight": 8.3,
+        "earnings_share": 8.56,
+        "earnings_M": 26283.9,
+        "mktcap_M": 465253.0,
+        "pe": 17.7,
+        "companies": 22
+      },
+      "Utilities": {
+        "weight": 3.62,
+        "earnings_share": 5.15,
+        "earnings_M": 15820.6,
+        "mktcap_M": 203113.5,
+        "pe": 12.84,
+        "companies": 38
+      },
+      "Real Estate": {
+        "weight": 0.19,
+        "earnings_share": 0.17,
+        "earnings_M": 521.1,
+        "mktcap_M": 10637.4,
+        "pe": 20.41,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 1997,
+    "sectors": {
+      "Energy": {
+        "weight": 8.59,
+        "earnings_share": 10.38,
+        "earnings_M": 33637.0,
+        "mktcap_M": 647237.6,
+        "pe": 19.24,
+        "companies": 33
+      },
+      "Materials": {
+        "weight": 4.04,
+        "earnings_share": 3.76,
+        "earnings_M": 12189.1,
+        "mktcap_M": 304226.1,
+        "pe": 24.96,
+        "companies": 54
+      },
+      "Industrials": {
+        "weight": 11.32,
+        "earnings_share": 10.76,
+        "earnings_M": 34843.4,
+        "mktcap_M": 852492.3,
+        "pe": 24.47,
+        "companies": 75
+      },
+      "Cons Disc": {
+        "weight": 8.25,
+        "earnings_share": 10.18,
+        "earnings_M": 32968.0,
+        "mktcap_M": 621820.8,
+        "pe": 18.86,
+        "companies": 75
+      },
+      "Cons Staples": {
+        "weight": 13.9,
+        "earnings_share": 12.33,
+        "earnings_M": 39933.1,
+        "mktcap_M": 1046819.7,
+        "pe": 26.21,
+        "companies": 46
+      },
+      "Health Care": {
+        "weight": 12.21,
+        "earnings_share": 8.19,
+        "earnings_M": 26541.8,
+        "mktcap_M": 919947.0,
+        "pe": 34.66,
+        "companies": 41
+      },
+      "Financials": {
+        "weight": 16.74,
+        "earnings_share": 22.51,
+        "earnings_M": 72924.3,
+        "mktcap_M": 1261273.0,
+        "pe": 17.3,
+        "companies": 69
+      },
+      "Info Tech": {
+        "weight": 12.84,
+        "earnings_share": 10.76,
+        "earnings_M": 34861.0,
+        "mktcap_M": 967006.2,
+        "pe": 27.74,
+        "companies": 49
+      },
+      "Telecom": {
+        "weight": 8.75,
+        "earnings_share": 7.75,
+        "earnings_M": 25100.4,
+        "mktcap_M": 659145.7,
+        "pe": 26.26,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 3.21,
+        "earnings_share": 3.27,
+        "earnings_M": 10591.6,
+        "mktcap_M": 242088.5,
+        "pe": 22.86,
+        "companies": 36
+      },
+      "Real Estate": {
+        "weight": 0.15,
+        "earnings_share": 0.12,
+        "earnings_M": 378.1,
+        "mktcap_M": 11034.0,
+        "pe": 29.19,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 1998,
+    "sectors": {
+      "Energy": {
+        "weight": 5.99,
+        "earnings_share": 3.16,
+        "earnings_M": 12086.2,
+        "mktcap_M": 579283.3,
+        "pe": 47.93,
+        "companies": 28
+      },
+      "Materials": {
+        "weight": 2.81,
+        "earnings_share": 3.66,
+        "earnings_M": 13994.5,
+        "mktcap_M": 271800.8,
+        "pe": 19.42,
+        "companies": 55
+      },
+      "Industrials": {
+        "weight": 9.72,
+        "earnings_share": 9.68,
+        "earnings_M": 36992.8,
+        "mktcap_M": 940442.4,
+        "pe": 25.42,
+        "companies": 75
+      },
+      "Cons Disc": {
+        "weight": 8.36,
+        "earnings_share": 26.48,
+        "earnings_M": 101177.1,
+        "mktcap_M": 808839.6,
+        "pe": 7.99,
+        "companies": 75
+      },
+      "Cons Staples": {
+        "weight": 14.03,
+        "earnings_share": 10.08,
+        "earnings_M": 38498.9,
+        "mktcap_M": 1357203.7,
+        "pe": 35.25,
+        "companies": 49
+      },
+      "Health Care": {
+        "weight": 13.52,
+        "earnings_share": 8.19,
+        "earnings_M": 31272.9,
+        "mktcap_M": 1307991.6,
+        "pe": 41.83,
+        "companies": 40
+      },
+      "Financials": {
+        "weight": 15.86,
+        "earnings_share": 20.6,
+        "earnings_M": 78718.4,
+        "mktcap_M": 1534414.6,
+        "pe": 19.49,
+        "companies": 72
+      },
+      "Info Tech": {
+        "weight": 16.19,
+        "earnings_share": 7.28,
+        "earnings_M": 27804.6,
+        "mktcap_M": 1566412.3,
+        "pe": 56.34,
+        "companies": 50
+      },
+      "Telecom": {
+        "weight": 10.36,
+        "earnings_share": 7.02,
+        "earnings_M": 26822.6,
+        "mktcap_M": 1002102.1,
+        "pe": 37.36,
+        "companies": 24
+      },
+      "Utilities": {
+        "weight": 3.03,
+        "earnings_share": 3.75,
+        "earnings_M": 14340.0,
+        "mktcap_M": 292921.1,
+        "pe": 20.43,
+        "companies": 37
+      },
+      "Real Estate": {
+        "weight": 0.12,
+        "earnings_share": 0.09,
+        "earnings_M": 331.2,
+        "mktcap_M": 11178.5,
+        "pe": 33.75,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 1999,
+    "sectors": {
+      "Energy": {
+        "weight": 6.15,
+        "earnings_share": 5.6,
+        "earnings_M": 23649.2,
+        "mktcap_M": 713499.7,
+        "pe": 30.17,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 2.92,
+        "earnings_share": 4.26,
+        "earnings_M": 17978.7,
+        "mktcap_M": 339210.4,
+        "pe": 18.87,
+        "companies": 48
+      },
+      "Industrials": {
+        "weight": 9.9,
+        "earnings_share": 9.3,
+        "earnings_M": 39246.0,
+        "mktcap_M": 1148312.2,
+        "pe": 29.26,
+        "companies": 69
+      },
+      "Cons Disc": {
+        "weight": 9.45,
+        "earnings_share": 10.56,
+        "earnings_M": 44595.6,
+        "mktcap_M": 1095913.6,
+        "pe": 24.57,
+        "companies": 77
+      },
+      "Cons Staples": {
+        "weight": 10.09,
+        "earnings_share": 10.55,
+        "earnings_M": 44538.7,
+        "mktcap_M": 1170214.9,
+        "pe": 26.27,
+        "companies": 45
+      },
+      "Health Care": {
+        "weight": 10.61,
+        "earnings_share": 9.15,
+        "earnings_M": 38640.2,
+        "mktcap_M": 1230933.4,
+        "pe": 31.86,
+        "companies": 44
+      },
+      "Financials": {
+        "weight": 13.71,
+        "earnings_share": 23.72,
+        "earnings_M": 100138.7,
+        "mktcap_M": 1589778.7,
+        "pe": 15.88,
+        "companies": 72
+      },
+      "Info Tech": {
+        "weight": 24.2,
+        "earnings_share": 14.64,
+        "earnings_M": 61787.0,
+        "mktcap_M": 2807119.5,
+        "pe": 45.43,
+        "companies": 58
+      },
+      "Telecom": {
+        "weight": 10.62,
+        "earnings_share": 7.95,
+        "earnings_M": 33536.6,
+        "mktcap_M": 1231340.8,
+        "pe": 36.72,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 2.19,
+        "earnings_share": 4.13,
+        "earnings_M": 17429.8,
+        "mktcap_M": 253788.7,
+        "pe": 14.56,
+        "companies": 38
+      },
+      "Real Estate": {
+        "weight": 0.16,
+        "earnings_share": 0.13,
+        "earnings_M": 567.9,
+        "mktcap_M": 18158.0,
+        "pe": 31.97,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 2000,
+    "sectors": {
+      "Energy": {
+        "weight": 6.6,
+        "earnings_share": 11.68,
+        "earnings_M": 49635.3,
+        "mktcap_M": 809596.5,
+        "pe": 16.31,
+        "companies": 32
+      },
+      "Materials": {
+        "weight": 2.2,
+        "earnings_share": 2.55,
+        "earnings_M": 10829.8,
+        "mktcap_M": 269944.9,
+        "pe": 24.93,
+        "companies": 45
+      },
+      "Industrials": {
+        "weight": 9.23,
+        "earnings_share": 10.59,
+        "earnings_M": 44999.4,
+        "mktcap_M": 1131126.6,
+        "pe": 25.14,
+        "companies": 68
+      },
+      "Cons Disc": {
+        "weight": 6.08,
+        "earnings_share": 6.45,
+        "earnings_M": 27438.1,
+        "mktcap_M": 745273.6,
+        "pe": 27.16,
+        "companies": 74
+      },
+      "Cons Staples": {
+        "weight": 10.0,
+        "earnings_share": 9.59,
+        "earnings_M": 40769.3,
+        "mktcap_M": 1225768.4,
+        "pe": 30.07,
+        "companies": 42
+      },
+      "Health Care": {
+        "weight": 14.09,
+        "earnings_share": 9.4,
+        "earnings_M": 39955.4,
+        "mktcap_M": 1727195.0,
+        "pe": 43.23,
+        "companies": 50
+      },
+      "Financials": {
+        "weight": 16.39,
+        "earnings_share": 24.22,
+        "earnings_M": 102944.7,
+        "mktcap_M": 2009613.9,
+        "pe": 19.52,
+        "companies": 72
+      },
+      "Info Tech": {
+        "weight": 24.72,
+        "earnings_share": 13.9,
+        "earnings_M": 59068.9,
+        "mktcap_M": 3030556.8,
+        "pe": 51.31,
+        "companies": 80
+      },
+      "Telecom": {
+        "weight": 7.21,
+        "earnings_share": 8.59,
+        "earnings_M": 36521.0,
+        "mktcap_M": 883804.0,
+        "pe": 24.2,
+        "companies": 21
+      },
+      "Utilities": {
+        "weight": 3.38,
+        "earnings_share": 2.85,
+        "earnings_M": 12119.5,
+        "mktcap_M": 414028.0,
+        "pe": 34.16,
+        "companies": 37
+      },
+      "Real Estate": {
+        "weight": 0.1,
+        "earnings_share": 0.19,
+        "earnings_M": 806.8,
+        "mktcap_M": 12076.4,
+        "pe": 14.97,
+        "companies": 2
+      }
+    }
+  },
+  {
+    "year": 2001,
+    "sectors": {
+      "Energy": {
+        "weight": 6.77,
+        "earnings_share": 18.84,
+        "earnings_M": 35955.1,
+        "mktcap_M": 706422.2,
+        "pe": 19.65,
+        "companies": 30
+      },
+      "Materials": {
+        "weight": 2.54,
+        "earnings_share": 3.04,
+        "earnings_M": 5810.5,
+        "mktcap_M": 265107.6,
+        "pe": 45.63,
+        "companies": 39
+      },
+      "Industrials": {
+        "weight": 9.95,
+        "earnings_share": 16.38,
+        "earnings_M": 31250.3,
+        "mktcap_M": 1039316.6,
+        "pe": 33.26,
+        "companies": 62
+      },
+      "Cons Disc": {
+        "weight": 7.35,
+        "earnings_share": 2.81,
+        "earnings_M": 5367.5,
+        "mktcap_M": 767838.2,
+        "pe": 143.05,
+        "companies": 70
+      },
+      "Cons Staples": {
+        "weight": 11.52,
+        "earnings_share": 24.65,
+        "earnings_M": 47047.3,
+        "mktcap_M": 1203012.6,
+        "pe": 25.57,
+        "companies": 39
+      },
+      "Health Care": {
+        "weight": 14.79,
+        "earnings_share": 25.62,
+        "earnings_M": 48890.4,
+        "mktcap_M": 1543842.8,
+        "pe": 31.58,
+        "companies": 52
+      },
+      "Financials": {
+        "weight": 18.34,
+        "earnings_share": 45.97,
+        "earnings_M": 87726.2,
+        "mktcap_M": 1914717.1,
+        "pe": 21.83,
+        "companies": 74
+      },
+      "Info Tech": {
+        "weight": 18.04,
+        "earnings_share": -54.42,
+        "earnings_M": -103843.5,
+        "mktcap_M": 1883168.1,
+        "pe": null,
+        "companies": 84
+      },
+      "Telecom": {
+        "weight": 7.81,
+        "earnings_share": 6.11,
+        "earnings_M": 11666.5,
+        "mktcap_M": 815625.2,
+        "pe": 69.91,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 2.69,
+        "earnings_share": 10.6,
+        "earnings_M": 20231.6,
+        "mktcap_M": 281179.1,
+        "pe": 13.9,
+        "companies": 34
+      },
+      "Real Estate": {
+        "weight": 0.2,
+        "earnings_share": 0.38,
+        "earnings_M": 729.5,
+        "mktcap_M": 20518.5,
+        "pe": 28.13,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 2002,
+    "sectors": {
+      "Energy": {
+        "weight": 7.0,
+        "earnings_share": 17.03,
+        "earnings_M": 12072.3,
+        "mktcap_M": 585773.2,
+        "pe": 48.52,
+        "companies": 27
+      },
+      "Materials": {
+        "weight": 3.03,
+        "earnings_share": -5.55,
+        "earnings_M": -3931.9,
+        "mktcap_M": 253776.5,
+        "pe": null,
+        "companies": 37
+      },
+      "Industrials": {
+        "weight": 10.27,
+        "earnings_share": 29.17,
+        "earnings_M": 20680.4,
+        "mktcap_M": 859419.4,
+        "pe": 41.56,
+        "companies": 61
+      },
+      "Cons Disc": {
+        "weight": 6.54,
+        "earnings_share": -113.05,
+        "earnings_M": -80146.1,
+        "mktcap_M": 547363.5,
+        "pe": null,
+        "companies": 71
+      },
+      "Cons Staples": {
+        "weight": 13.16,
+        "earnings_share": 73.48,
+        "earnings_M": 52087.9,
+        "mktcap_M": 1101558.9,
+        "pe": 21.15,
+        "companies": 39
+      },
+      "Health Care": {
+        "weight": 14.91,
+        "earnings_share": 65.33,
+        "earnings_M": 46313.3,
+        "mktcap_M": 1247769.2,
+        "pe": 26.94,
+        "companies": 54
+      },
+      "Financials": {
+        "weight": 20.01,
+        "earnings_share": 157.24,
+        "earnings_M": 111473.3,
+        "mktcap_M": 1674829.4,
+        "pe": 15.02,
+        "companies": 82
+      },
+      "Info Tech": {
+        "weight": 14.54,
+        "earnings_share": -29.05,
+        "earnings_M": -20597.0,
+        "mktcap_M": 1216835.8,
+        "pe": null,
+        "companies": 81
+      },
+      "Telecom": {
+        "weight": 7.62,
+        "earnings_share": -85.23,
+        "earnings_M": -60418.7,
+        "mktcap_M": 637961.7,
+        "pe": null,
+        "companies": 25
+      },
+      "Utilities": {
+        "weight": 2.64,
+        "earnings_share": -10.9,
+        "earnings_M": -7726.7,
+        "mktcap_M": 220866.1,
+        "pe": null,
+        "companies": 34
+      },
+      "Real Estate": {
+        "weight": 0.29,
+        "earnings_share": 1.53,
+        "earnings_M": 1084.9,
+        "mktcap_M": 23872.7,
+        "pe": 22.0,
+        "companies": 3
+      }
+    }
+  },
+  {
+    "year": 2003,
+    "sectors": {
+      "Energy": {
+        "weight": 6.05,
+        "earnings_share": 9.23,
+        "earnings_M": 42100.5,
+        "mktcap_M": 610428.7,
+        "pe": 14.5,
+        "companies": 26
+      },
+      "Materials": {
+        "weight": 3.04,
+        "earnings_share": 1.98,
+        "earnings_M": 9030.9,
+        "mktcap_M": 306713.5,
+        "pe": 33.96,
+        "companies": 33
+      },
+      "Industrials": {
+        "weight": 10.89,
+        "earnings_share": 10.04,
+        "earnings_M": 45795.5,
+        "mktcap_M": 1099367.9,
+        "pe": 24.01,
+        "companies": 60
+      },
+      "Cons Disc": {
+        "weight": 8.03,
+        "earnings_share": 8.12,
+        "earnings_M": 37050.5,
+        "mktcap_M": 810149.1,
+        "pe": 21.87,
+        "companies": 71
+      },
+      "Cons Staples": {
+        "weight": 11.29,
+        "earnings_share": 11.21,
+        "earnings_M": 51105.7,
+        "mktcap_M": 1139774.5,
+        "pe": 22.3,
+        "companies": 39
+      },
+      "Health Care": {
+        "weight": 14.13,
+        "earnings_share": 10.19,
+        "earnings_M": 46463.5,
+        "mktcap_M": 1426081.8,
+        "pe": 30.69,
+        "companies": 55
+      },
+      "Financials": {
+        "weight": 20.88,
+        "earnings_share": 33.0,
+        "earnings_M": 150497.6,
+        "mktcap_M": 2107371.6,
+        "pe": 14.0,
+        "companies": 81
+      },
+      "Info Tech": {
+        "weight": 16.01,
+        "earnings_share": 6.71,
+        "earnings_M": 30601.7,
+        "mktcap_M": 1615478.1,
+        "pe": 52.79,
+        "companies": 76
+      },
+      "Telecom": {
+        "weight": 6.56,
+        "earnings_share": 7.51,
+        "earnings_M": 34267.2,
+        "mktcap_M": 661876.6,
+        "pe": 19.32,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 2.72,
+        "earnings_share": 1.65,
+        "earnings_M": 7525.2,
+        "mktcap_M": 274718.8,
+        "pe": 36.51,
+        "companies": 34
+      },
+      "Real Estate": {
+        "weight": 0.4,
+        "earnings_share": 0.35,
+        "earnings_M": 1599.1,
+        "mktcap_M": 40813.7,
+        "pe": 25.52,
+        "companies": 5
+      }
+    }
+  },
+  {
+    "year": 2004,
+    "sectors": {
+      "Energy": {
+        "weight": 7.15,
+        "earnings_share": 12.18,
+        "earnings_M": 65231.1,
+        "mktcap_M": 800817.3,
+        "pe": 12.28,
+        "companies": 27
+      },
+      "Materials": {
+        "weight": 3.06,
+        "earnings_share": 3.13,
+        "earnings_M": 16783.6,
+        "mktcap_M": 342271.6,
+        "pe": 20.39,
+        "companies": 33
+      },
+      "Industrials": {
+        "weight": 11.62,
+        "earnings_share": 10.58,
+        "earnings_M": 56691.1,
+        "mktcap_M": 1300704.8,
+        "pe": 22.94,
+        "companies": 60
+      },
+      "Cons Disc": {
+        "weight": 8.66,
+        "earnings_share": 7.56,
+        "earnings_M": 40509.5,
+        "mktcap_M": 968880.9,
+        "pe": 23.92,
+        "companies": 72
+      },
+      "Cons Staples": {
+        "weight": 10.81,
+        "earnings_share": 11.67,
+        "earnings_M": 62486.9,
+        "mktcap_M": 1210385.6,
+        "pe": 19.37,
+        "companies": 39
+      },
+      "Health Care": {
+        "weight": 13.2,
+        "earnings_share": 10.95,
+        "earnings_M": 58646.3,
+        "mktcap_M": 1477954.9,
+        "pe": 25.2,
+        "companies": 58
+      },
+      "Financials": {
+        "weight": 20.84,
+        "earnings_share": 28.94,
+        "earnings_M": 155009.9,
+        "mktcap_M": 2332363.3,
+        "pe": 15.05,
+        "companies": 81
+      },
+      "Info Tech": {
+        "weight": 14.97,
+        "earnings_share": 10.63,
+        "earnings_M": 56921.1,
+        "mktcap_M": 1675826.0,
+        "pe": 29.44,
+        "companies": 77
+      },
+      "Telecom": {
+        "weight": 6.25,
+        "earnings_share": 0.01,
+        "earnings_M": 43.6,
+        "mktcap_M": 699601.7,
+        "pe": null,
+        "companies": 22
+      },
+      "Utilities": {
+        "weight": 2.97,
+        "earnings_share": 3.86,
+        "earnings_M": 20692.3,
+        "mktcap_M": 332352.7,
+        "pe": 16.06,
+        "companies": 33
+      },
+      "Real Estate": {
+        "weight": 0.47,
+        "earnings_share": 0.48,
+        "earnings_M": 2594.6,
+        "mktcap_M": 52566.2,
+        "pe": 20.26,
+        "companies": 5
+      }
+    }
+  },
+  {
+    "year": 2005,
+    "sectors": {
+      "Energy": {
+        "weight": 9.12,
+        "earnings_share": 15.99,
+        "earnings_M": 103893.5,
+        "mktcap_M": 1045505.1,
+        "pe": 10.06,
+        "companies": 29
+      },
+      "Materials": {
+        "weight": 2.88,
+        "earnings_share": 3.53,
+        "earnings_M": 22921.2,
+        "mktcap_M": 330490.5,
+        "pe": 14.42,
+        "companies": 31
+      },
+      "Industrials": {
+        "weight": 11.41,
+        "earnings_share": 10.27,
+        "earnings_M": 66763.2,
+        "mktcap_M": 1307732.8,
+        "pe": 19.59,
+        "companies": 56
+      },
+      "Cons Disc": {
+        "weight": 8.48,
+        "earnings_share": 5.7,
+        "earnings_M": 37056.1,
+        "mktcap_M": 972335.8,
+        "pe": 26.24,
+        "companies": 71
+      },
+      "Cons Staples": {
+        "weight": 10.28,
+        "earnings_share": 9.94,
+        "earnings_M": 64575.0,
+        "mktcap_M": 1177961.3,
+        "pe": 18.24,
+        "companies": 39
+      },
+      "Health Care": {
+        "weight": 13.49,
+        "earnings_share": 10.86,
+        "earnings_M": 70589.3,
+        "mktcap_M": 1546490.4,
+        "pe": 21.91,
+        "companies": 60
+      },
+      "Financials": {
+        "weight": 20.62,
+        "earnings_share": 27.62,
+        "earnings_M": 179481.1,
+        "mktcap_M": 2363378.3,
+        "pe": 13.17,
+        "companies": 80
+      },
+      "Info Tech": {
+        "weight": 14.19,
+        "earnings_share": 10.53,
+        "earnings_M": 68394.3,
+        "mktcap_M": 1626736.4,
+        "pe": 23.78,
+        "companies": 74
+      },
+      "Telecom": {
+        "weight": 5.54,
+        "earnings_share": 3.23,
+        "earnings_M": 20967.9,
+        "mktcap_M": 634786.9,
+        "pe": 30.27,
+        "companies": 21
+      },
+      "Utilities": {
+        "weight": 3.3,
+        "earnings_share": 1.79,
+        "earnings_M": 11616.4,
+        "mktcap_M": 378706.2,
+        "pe": 32.6,
+        "companies": 33
+      },
+      "Real Estate": {
+        "weight": 0.7,
+        "earnings_share": 0.54,
+        "earnings_M": 3533.7,
+        "mktcap_M": 79949.6,
+        "pe": 22.63,
+        "companies": 7
+      }
+    }
+  },
+  {
+    "year": 2006,
+    "sectors": {
+      "Energy": {
+        "weight": 9.57,
+        "earnings_share": 15.76,
+        "earnings_M": 122700.6,
+        "mktcap_M": 1245172.7,
+        "pe": 10.15,
+        "companies": 31
+      },
+      "Materials": {
+        "weight": 2.87,
+        "earnings_share": 3.53,
+        "earnings_M": 27489.5,
+        "mktcap_M": 373064.1,
+        "pe": 13.57,
+        "companies": 30
+      },
+      "Industrials": {
+        "weight": 10.83,
+        "earnings_share": 10.42,
+        "earnings_M": 81065.5,
+        "mktcap_M": 1408529.2,
+        "pe": 17.38,
+        "companies": 55
+      },
+      "Cons Disc": {
+        "weight": 8.04,
+        "earnings_share": 5.02,
+        "earnings_M": 39110.3,
+        "mktcap_M": 1045650.7,
+        "pe": 26.74,
+        "companies": 70
+      },
+      "Cons Staples": {
+        "weight": 10.36,
+        "earnings_share": 8.84,
+        "earnings_M": 68835.2,
+        "mktcap_M": 1347438.9,
+        "pe": 19.57,
+        "companies": 41
+      },
+      "Health Care": {
+        "weight": 12.41,
+        "earnings_share": 10.0,
+        "earnings_M": 77849.1,
+        "mktcap_M": 1614758.7,
+        "pe": 20.74,
+        "companies": 59
+      },
+      "Financials": {
+        "weight": 21.26,
+        "earnings_share": 28.42,
+        "earnings_M": 221236.3,
+        "mktcap_M": 2766001.1,
+        "pe": 12.5,
+        "companies": 80
+      },
+      "Info Tech": {
+        "weight": 12.67,
+        "earnings_share": 9.25,
+        "earnings_M": 71982.5,
+        "mktcap_M": 1647641.1,
+        "pe": 22.89,
+        "companies": 74
+      },
+      "Telecom": {
+        "weight": 7.37,
+        "earnings_share": 4.72,
+        "earnings_M": 36701.1,
+        "mktcap_M": 958834.7,
+        "pe": 26.13,
+        "companies": 25
+      },
+      "Utilities": {
+        "weight": 3.48,
+        "earnings_share": 3.26,
+        "earnings_M": 25376.1,
+        "mktcap_M": 452892.7,
+        "pe": 17.85,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 1.14,
+        "earnings_share": 0.77,
+        "earnings_M": 6000.5,
+        "mktcap_M": 148169.9,
+        "pe": 24.69,
+        "companies": 11
+      }
+    }
+  },
+  {
+    "year": 2007,
+    "sectors": {
+      "Energy": {
+        "weight": 12.36,
+        "earnings_share": 20.31,
+        "earnings_M": 130083.5,
+        "mktcap_M": 1649472.7,
+        "pe": 12.68,
+        "companies": 35
+      },
+      "Materials": {
+        "weight": 3.03,
+        "earnings_share": 3.71,
+        "earnings_M": 23732.9,
+        "mktcap_M": 404732.4,
+        "pe": 17.05,
+        "companies": 29
+      },
+      "Industrials": {
+        "weight": 11.27,
+        "earnings_share": 13.68,
+        "earnings_M": 87584.7,
+        "mktcap_M": 1504346.7,
+        "pe": 17.18,
+        "companies": 58
+      },
+      "Cons Disc": {
+        "weight": 6.65,
+        "earnings_share": -0.64,
+        "earnings_M": -4091.1,
+        "mktcap_M": 887353.6,
+        "pe": null,
+        "companies": 70
+      },
+      "Cons Staples": {
+        "weight": 10.79,
+        "earnings_share": 12.08,
+        "earnings_M": 77375.6,
+        "mktcap_M": 1439636.4,
+        "pe": 18.61,
+        "companies": 41
+      },
+      "Health Care": {
+        "weight": 12.38,
+        "earnings_share": 11.18,
+        "earnings_M": 71578.2,
+        "mktcap_M": 1651879.5,
+        "pe": 23.08,
+        "companies": 55
+      },
+      "Financials": {
+        "weight": 16.75,
+        "earnings_share": 20.35,
+        "earnings_M": 130313.3,
+        "mktcap_M": 2235323.4,
+        "pe": 17.15,
+        "companies": 84
+      },
+      "Info Tech": {
+        "weight": 13.82,
+        "earnings_share": 11.9,
+        "earnings_M": 76214.3,
+        "mktcap_M": 1844685.4,
+        "pe": 24.2,
+        "companies": 69
+      },
+      "Telecom": {
+        "weight": 7.36,
+        "earnings_share": 2.18,
+        "earnings_M": 13939.7,
+        "mktcap_M": 982531.3,
+        "pe": 70.48,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 4.37,
+        "earnings_share": 4.09,
+        "earnings_M": 26215.2,
+        "mktcap_M": 583197.6,
+        "pe": 22.25,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 1.22,
+        "earnings_share": 1.16,
+        "earnings_M": 7424.1,
+        "mktcap_M": 162685.6,
+        "pe": 21.91,
+        "companies": 15
+      }
+    }
+  },
+  {
+    "year": 2008,
+    "sectors": {
+      "Energy": {
+        "weight": 12.46,
+        "earnings_share": 71.97,
+        "earnings_M": 101361.8,
+        "mktcap_M": 1061079.0,
+        "pe": 10.47,
+        "companies": 41
+      },
+      "Materials": {
+        "weight": 3.15,
+        "earnings_share": 3.0,
+        "earnings_M": 4218.5,
+        "mktcap_M": 268442.3,
+        "pe": 63.63,
+        "companies": 29
+      },
+      "Industrials": {
+        "weight": 11.01,
+        "earnings_share": 53.64,
+        "earnings_M": 75541.3,
+        "mktcap_M": 937424.4,
+        "pe": 12.41,
+        "companies": 62
+      },
+      "Cons Disc": {
+        "weight": 6.4,
+        "earnings_share": -38.06,
+        "earnings_M": -53607.4,
+        "mktcap_M": 545462.0,
+        "pe": null,
+        "companies": 69
+      },
+      "Cons Staples": {
+        "weight": 13.1,
+        "earnings_share": 49.49,
+        "earnings_M": 69694.5,
+        "mktcap_M": 1116186.0,
+        "pe": 16.02,
+        "companies": 41
+      },
+      "Health Care": {
+        "weight": 14.83,
+        "earnings_share": 57.14,
+        "earnings_M": 80471.1,
+        "mktcap_M": 1262973.8,
+        "pe": 15.69,
+        "companies": 58
+      },
+      "Financials": {
+        "weight": 12.51,
+        "earnings_share": -176.55,
+        "earnings_M": -248654.5,
+        "mktcap_M": 1065625.3,
+        "pe": null,
+        "companies": 79
+      },
+      "Info Tech": {
+        "weight": 14.88,
+        "earnings_share": 49.23,
+        "earnings_M": 69328.8,
+        "mktcap_M": 1267486.6,
+        "pe": 18.28,
+        "companies": 65
+      },
+      "Telecom": {
+        "weight": 6.7,
+        "earnings_share": 9.99,
+        "earnings_M": 14073.9,
+        "mktcap_M": 570891.4,
+        "pe": 40.56,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 3.83,
+        "earnings_share": 18.74,
+        "earnings_M": 26396.8,
+        "mktcap_M": 326300.6,
+        "pe": 12.36,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 1.12,
+        "earnings_share": 1.43,
+        "earnings_M": 2012.4,
+        "mktcap_M": 95750.6,
+        "pe": 47.58,
+        "companies": 16
+      }
+    }
+  },
+  {
+    "year": 2009,
+    "sectors": {
+      "Energy": {
+        "weight": 11.54,
+        "earnings_share": 7.29,
+        "earnings_M": 45286.4,
+        "mktcap_M": 1183657.7,
+        "pe": 26.14,
+        "companies": 43
+      },
+      "Materials": {
+        "weight": 3.48,
+        "earnings_share": 1.91,
+        "earnings_M": 11856.3,
+        "mktcap_M": 357388.9,
+        "pe": 30.14,
+        "companies": 31
+      },
+      "Industrials": {
+        "weight": 10.49,
+        "earnings_share": 9.03,
+        "earnings_M": 56100.0,
+        "mktcap_M": 1076549.9,
+        "pe": 19.19,
+        "companies": 63
+      },
+      "Cons Disc": {
+        "weight": 7.83,
+        "earnings_share": 23.13,
+        "earnings_M": 143653.2,
+        "mktcap_M": 803547.4,
+        "pe": 5.59,
+        "companies": 68
+      },
+      "Cons Staples": {
+        "weight": 11.77,
+        "earnings_share": 12.71,
+        "earnings_M": 78949.8,
+        "mktcap_M": 1207605.5,
+        "pe": 15.3,
+        "companies": 43
+      },
+      "Health Care": {
+        "weight": 13.21,
+        "earnings_share": 16.67,
+        "earnings_M": 103531.8,
+        "mktcap_M": 1355543.5,
+        "pe": 13.09,
+        "companies": 55
+      },
+      "Financials": {
+        "weight": 14.59,
+        "earnings_share": 9.01,
+        "earnings_M": 55942.1,
+        "mktcap_M": 1496929.6,
+        "pe": 26.76,
+        "companies": 74
+      },
+      "Info Tech": {
+        "weight": 15.46,
+        "earnings_share": 10.91,
+        "earnings_M": 67780.7,
+        "mktcap_M": 1586110.7,
+        "pe": 23.4,
+        "companies": 69
+      },
+      "Telecom": {
+        "weight": 6.57,
+        "earnings_share": 4.53,
+        "earnings_M": 28121.7,
+        "mktcap_M": 673882.5,
+        "pe": 23.96,
+        "companies": 20
+      },
+      "Utilities": {
+        "weight": 3.56,
+        "earnings_share": 4.5,
+        "earnings_M": 27929.1,
+        "mktcap_M": 364869.6,
+        "pe": 13.06,
+        "companies": 34
+      },
+      "Real Estate": {
+        "weight": 1.51,
+        "earnings_share": 0.3,
+        "earnings_M": 1890.9,
+        "mktcap_M": 154650.8,
+        "pe": 81.79,
+        "companies": 18
+      }
+    }
+  },
+  {
+    "year": 2010,
+    "sectors": {
+      "Energy": {
+        "weight": 11.71,
+        "earnings_share": 12.8,
+        "earnings_M": 97870.2,
+        "mktcap_M": 1380390.5,
+        "pe": 14.1,
+        "companies": 41
+      },
+      "Materials": {
+        "weight": 3.56,
+        "earnings_share": 2.83,
+        "earnings_M": 21623.1,
+        "mktcap_M": 419484.7,
+        "pe": 19.4,
+        "companies": 30
+      },
+      "Industrials": {
+        "weight": 10.71,
+        "earnings_share": 9.89,
+        "earnings_M": 75642.5,
+        "mktcap_M": 1262334.5,
+        "pe": 16.69,
+        "companies": 60
+      },
+      "Cons Disc": {
+        "weight": 8.35,
+        "earnings_share": 7.31,
+        "earnings_M": 55871.6,
+        "mktcap_M": 983862.5,
+        "pe": 17.61,
+        "companies": 66
+      },
+      "Cons Staples": {
+        "weight": 11.1,
+        "earnings_share": 12.16,
+        "earnings_M": 93032.7,
+        "mktcap_M": 1307477.5,
+        "pe": 14.05,
+        "companies": 42
+      },
+      "Health Care": {
+        "weight": 11.26,
+        "earnings_share": 11.16,
+        "earnings_M": 85337.5,
+        "mktcap_M": 1326400.2,
+        "pe": 15.54,
+        "companies": 53
+      },
+      "Financials": {
+        "weight": 16.25,
+        "earnings_share": 18.23,
+        "earnings_M": 139420.3,
+        "mktcap_M": 1914281.6,
+        "pe": 13.73,
+        "companies": 72
+      },
+      "Info Tech": {
+        "weight": 15.5,
+        "earnings_share": 15.97,
+        "earnings_M": 122175.8,
+        "mktcap_M": 1826747.3,
+        "pe": 14.95,
+        "companies": 65
+      },
+      "Telecom": {
+        "weight": 6.66,
+        "earnings_share": 5.69,
+        "earnings_M": 43505.2,
+        "mktcap_M": 784676.4,
+        "pe": 18.04,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 3.2,
+        "earnings_share": 3.48,
+        "earnings_M": 26595.1,
+        "mktcap_M": 377447.5,
+        "pe": 14.19,
+        "companies": 34
+      },
+      "Real Estate": {
+        "weight": 1.7,
+        "earnings_share": 0.49,
+        "earnings_M": 3731.4,
+        "mktcap_M": 200380.3,
+        "pe": 53.7,
+        "companies": 17
+      }
+    }
+  },
+  {
+    "year": 2011,
+    "sectors": {
+      "Energy": {
+        "weight": 11.8,
+        "earnings_share": 14.77,
+        "earnings_M": 127735.1,
+        "mktcap_M": 1400517.2,
+        "pe": 10.96,
+        "companies": 43
+      },
+      "Materials": {
+        "weight": 3.4,
+        "earnings_share": 3.25,
+        "earnings_M": 28100.3,
+        "mktcap_M": 403914.2,
+        "pe": 14.37,
+        "companies": 31
+      },
+      "Industrials": {
+        "weight": 10.43,
+        "earnings_share": 10.33,
+        "earnings_M": 89330.2,
+        "mktcap_M": 1238542.3,
+        "pe": 13.86,
+        "companies": 64
+      },
+      "Cons Disc": {
+        "weight": 8.64,
+        "earnings_share": 8.18,
+        "earnings_M": 70748.7,
+        "mktcap_M": 1025962.4,
+        "pe": 14.5,
+        "companies": 67
+      },
+      "Cons Staples": {
+        "weight": 12.13,
+        "earnings_share": 10.33,
+        "earnings_M": 89339.0,
+        "mktcap_M": 1439892.6,
+        "pe": 16.12,
+        "companies": 43
+      },
+      "Health Care": {
+        "weight": 12.12,
+        "earnings_share": 10.97,
+        "earnings_M": 94845.9,
+        "mktcap_M": 1438841.1,
+        "pe": 15.17,
+        "companies": 54
+      },
+      "Financials": {
+        "weight": 13.5,
+        "earnings_share": 18.45,
+        "earnings_M": 159512.5,
+        "mktcap_M": 1602698.1,
+        "pe": 10.05,
+        "companies": 72
+      },
+      "Info Tech": {
+        "weight": 15.42,
+        "earnings_share": 15.9,
+        "earnings_M": 137487.7,
+        "mktcap_M": 1830130.7,
+        "pe": 13.31,
+        "companies": 64
+      },
+      "Telecom": {
+        "weight": 6.79,
+        "earnings_share": 3.88,
+        "earnings_M": 33513.0,
+        "mktcap_M": 805868.8,
+        "pe": 24.05,
+        "companies": 22
+      },
+      "Utilities": {
+        "weight": 3.65,
+        "earnings_share": 3.19,
+        "earnings_M": 27548.3,
+        "mktcap_M": 433506.5,
+        "pe": 15.74,
+        "companies": 32
+      },
+      "Real Estate": {
+        "weight": 2.13,
+        "earnings_share": 0.74,
+        "earnings_M": 6392.1,
+        "mktcap_M": 252437.2,
+        "pe": 39.49,
+        "companies": 18
+      }
+    }
+  },
+  {
+    "year": 2012,
+    "sectors": {
+      "Energy": {
+        "weight": 10.5,
+        "earnings_share": 14.31,
+        "earnings_M": 119364.2,
+        "mktcap_M": 1429647.4,
+        "pe": 11.98,
+        "companies": 45
+      },
+      "Materials": {
+        "weight": 3.56,
+        "earnings_share": 2.96,
+        "earnings_M": 24678.6,
+        "mktcap_M": 484671.6,
+        "pe": 19.64,
+        "companies": 30
+      },
+      "Industrials": {
+        "weight": 9.82,
+        "earnings_share": 10.03,
+        "earnings_M": 83645.3,
+        "mktcap_M": 1337110.5,
+        "pe": 15.99,
+        "companies": 62
+      },
+      "Cons Disc": {
+        "weight": 9.19,
+        "earnings_share": 7.99,
+        "earnings_M": 66650.1,
+        "mktcap_M": 1251021.3,
+        "pe": 18.77,
+        "companies": 70
+      },
+      "Cons Staples": {
+        "weight": 11.36,
+        "earnings_share": 11.21,
+        "earnings_M": 93528.2,
+        "mktcap_M": 1545960.8,
+        "pe": 16.53,
+        "companies": 46
+      },
+      "Health Care": {
+        "weight": 12.08,
+        "earnings_share": 11.46,
+        "earnings_M": 95606.9,
+        "mktcap_M": 1644073.2,
+        "pe": 17.2,
+        "companies": 54
+      },
+      "Financials": {
+        "weight": 14.95,
+        "earnings_share": 18.58,
+        "earnings_M": 155024.5,
+        "mktcap_M": 2035030.2,
+        "pe": 13.13,
+        "companies": 71
+      },
+      "Info Tech": {
+        "weight": 16.0,
+        "earnings_share": 15.69,
+        "earnings_M": 130917.7,
+        "mktcap_M": 2178308.7,
+        "pe": 16.64,
+        "companies": 59
+      },
+      "Telecom": {
+        "weight": 7.06,
+        "earnings_share": 4.31,
+        "earnings_M": 35999.8,
+        "mktcap_M": 960948.6,
+        "pe": 26.69,
+        "companies": 21
+      },
+      "Utilities": {
+        "weight": 3.17,
+        "earnings_share": 2.48,
+        "earnings_M": 20728.7,
+        "mktcap_M": 431686.1,
+        "pe": 20.83,
+        "companies": 30
+      },
+      "Real Estate": {
+        "weight": 2.3,
+        "earnings_share": 0.98,
+        "earnings_M": 8156.8,
+        "mktcap_M": 313341.5,
+        "pe": 38.41,
+        "companies": 18
+      }
+    }
+  },
+  {
+    "year": 2013,
+    "sectors": {
+      "Energy": {
+        "weight": 10.04,
+        "earnings_share": 11.58,
+        "earnings_M": 114867.2,
+        "mktcap_M": 1725289.6,
+        "pe": 15.02,
+        "companies": 45
+      },
+      "Materials": {
+        "weight": 3.37,
+        "earnings_share": 2.94,
+        "earnings_M": 29161.6,
+        "mktcap_M": 579745.8,
+        "pe": 19.88,
+        "companies": 30
+      },
+      "Industrials": {
+        "weight": 10.67,
+        "earnings_share": 10.45,
+        "earnings_M": 103637.2,
+        "mktcap_M": 1832276.3,
+        "pe": 17.68,
+        "companies": 66
+      },
+      "Cons Disc": {
+        "weight": 9.72,
+        "earnings_share": 8.01,
+        "earnings_M": 79439.0,
+        "mktcap_M": 1669823.2,
+        "pe": 21.02,
+        "companies": 72
+      },
+      "Cons Staples": {
+        "weight": 10.28,
+        "earnings_share": 10.21,
+        "earnings_M": 101273.5,
+        "mktcap_M": 1765250.6,
+        "pe": 17.43,
+        "companies": 44
+      },
+      "Health Care": {
+        "weight": 13.18,
+        "earnings_share": 11.11,
+        "earnings_M": 110212.7,
+        "mktcap_M": 2265045.5,
+        "pe": 20.55,
+        "companies": 56
+      },
+      "Financials": {
+        "weight": 16.41,
+        "earnings_share": 19.77,
+        "earnings_M": 196049.6,
+        "mktcap_M": 2818727.2,
+        "pe": 14.38,
+        "companies": 70
+      },
+      "Info Tech": {
+        "weight": 13.05,
+        "earnings_share": 15.34,
+        "earnings_M": 152155.7,
+        "mktcap_M": 2242151.5,
+        "pe": 14.74,
+        "companies": 56
+      },
+      "Telecom": {
+        "weight": 8.5,
+        "earnings_share": 7.02,
+        "earnings_M": 69641.0,
+        "mktcap_M": 1459465.6,
+        "pe": 20.96,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 2.76,
+        "earnings_share": 2.46,
+        "earnings_M": 24386.0,
+        "mktcap_M": 473412.8,
+        "pe": 19.41,
+        "companies": 30
+      },
+      "Real Estate": {
+        "weight": 2.03,
+        "earnings_share": 1.09,
+        "earnings_M": 10795.4,
+        "mktcap_M": 348624.1,
+        "pe": 32.29,
+        "companies": 20
+      }
+    }
+  },
+  {
+    "year": 2014,
+    "sectors": {
+      "Energy": {
+        "weight": 8.14,
+        "earnings_share": 9.87,
+        "earnings_M": 96832.2,
+        "mktcap_M": 1574568.8,
+        "pe": 16.26,
+        "companies": 46
+      },
+      "Materials": {
+        "weight": 3.1,
+        "earnings_share": 2.18,
+        "earnings_M": 21408.8,
+        "mktcap_M": 600202.8,
+        "pe": 28.04,
+        "companies": 31
+      },
+      "Industrials": {
+        "weight": 10.08,
+        "earnings_share": 10.49,
+        "earnings_M": 102922.0,
+        "mktcap_M": 1950064.5,
+        "pe": 18.95,
+        "companies": 66
+      },
+      "Cons Disc": {
+        "weight": 9.35,
+        "earnings_share": 8.73,
+        "earnings_M": 85657.3,
+        "mktcap_M": 1808352.2,
+        "pe": 21.11,
+        "companies": 71
+      },
+      "Cons Staples": {
+        "weight": 10.0,
+        "earnings_share": 8.7,
+        "earnings_M": 85366.5,
+        "mktcap_M": 1934719.0,
+        "pe": 22.66,
+        "companies": 41
+      },
+      "Health Care": {
+        "weight": 14.52,
+        "earnings_share": 11.66,
+        "earnings_M": 114453.1,
+        "mktcap_M": 2808431.5,
+        "pe": 24.54,
+        "companies": 57
+      },
+      "Financials": {
+        "weight": 16.0,
+        "earnings_share": 19.87,
+        "earnings_M": 194992.8,
+        "mktcap_M": 3095938.6,
+        "pe": 15.88,
+        "companies": 71
+      },
+      "Info Tech": {
+        "weight": 13.41,
+        "earnings_share": 15.64,
+        "earnings_M": 153420.9,
+        "mktcap_M": 2594091.9,
+        "pe": 16.91,
+        "companies": 52
+      },
+      "Telecom": {
+        "weight": 9.98,
+        "earnings_share": 8.3,
+        "earnings_M": 81440.9,
+        "mktcap_M": 1930243.6,
+        "pe": 23.7,
+        "companies": 24
+      },
+      "Utilities": {
+        "weight": 3.07,
+        "earnings_share": 3.0,
+        "earnings_M": 29399.4,
+        "mktcap_M": 593803.8,
+        "pe": 20.2,
+        "companies": 30
+      },
+      "Real Estate": {
+        "weight": 2.35,
+        "earnings_share": 1.56,
+        "earnings_M": 15326.8,
+        "mktcap_M": 455214.7,
+        "pe": 29.7,
+        "companies": 21
+      }
+    }
+  },
+  {
+    "year": 2015,
+    "sectors": {
+      "Energy": {
+        "weight": 6.08,
+        "earnings_share": -7.86,
+        "earnings_M": -69177.7,
+        "mktcap_M": 1187421.4,
+        "pe": null,
+        "companies": 44
+      },
+      "Materials": {
+        "weight": 2.58,
+        "earnings_share": 1.93,
+        "earnings_M": 17002.1,
+        "mktcap_M": 502830.9,
+        "pe": 29.57,
+        "companies": 26
+      },
+      "Industrials": {
+        "weight": 9.46,
+        "earnings_share": 11.01,
+        "earnings_M": 96867.8,
+        "mktcap_M": 1846695.0,
+        "pe": 19.06,
+        "companies": 69
+      },
+      "Cons Disc": {
+        "weight": 9.62,
+        "earnings_share": 9.29,
+        "earnings_M": 81742.8,
+        "mktcap_M": 1878801.6,
+        "pe": 22.98,
+        "companies": 69
+      },
+      "Cons Staples": {
+        "weight": 10.49,
+        "earnings_share": 10.11,
+        "earnings_M": 89026.1,
+        "mktcap_M": 2046938.4,
+        "pe": 22.99,
+        "companies": 41
+      },
+      "Health Care": {
+        "weight": 14.96,
+        "earnings_share": 13.91,
+        "earnings_M": 122449.0,
+        "mktcap_M": 2920091.4,
+        "pe": 23.85,
+        "companies": 58
+      },
+      "Financials": {
+        "weight": 15.29,
+        "earnings_share": 25.51,
+        "earnings_M": 224578.6,
+        "mktcap_M": 2985031.6,
+        "pe": 13.29,
+        "companies": 70
+      },
+      "Info Tech": {
+        "weight": 12.78,
+        "earnings_share": 17.91,
+        "earnings_M": 157661.3,
+        "mktcap_M": 2494763.6,
+        "pe": 15.82,
+        "companies": 52
+      },
+      "Telecom": {
+        "weight": 13.4,
+        "earnings_share": 13.94,
+        "earnings_M": 122731.5,
+        "mktcap_M": 2616109.3,
+        "pe": 21.32,
+        "companies": 28
+      },
+      "Utilities": {
+        "weight": 2.75,
+        "earnings_share": 2.46,
+        "earnings_M": 21659.3,
+        "mktcap_M": 536028.2,
+        "pe": 24.75,
+        "companies": 30
+      },
+      "Real Estate": {
+        "weight": 2.6,
+        "earnings_share": 1.78,
+        "earnings_M": 15645.3,
+        "mktcap_M": 507120.0,
+        "pe": 32.41,
+        "companies": 25
+      }
+    }
+  },
+  {
+    "year": 2016,
+    "sectors": {
+      "Energy": {
+        "weight": 7.05,
+        "earnings_share": -3.46,
+        "earnings_M": -32487.6,
+        "mktcap_M": 1478571.5,
+        "pe": null,
+        "companies": 38
+      },
+      "Materials": {
+        "weight": 2.76,
+        "earnings_share": 1.9,
+        "earnings_M": 17822.3,
+        "mktcap_M": 578487.8,
+        "pe": 32.46,
+        "companies": 29
+      },
+      "Industrials": {
+        "weight": 9.85,
+        "earnings_share": 10.36,
+        "earnings_M": 97346.1,
+        "mktcap_M": 2065944.8,
+        "pe": 21.22,
+        "companies": 69
+      },
+      "Cons Disc": {
+        "weight": 9.14,
+        "earnings_share": 9.56,
+        "earnings_M": 89802.6,
+        "mktcap_M": 1917058.9,
+        "pe": 21.35,
+        "companies": 73
+      },
+      "Cons Staples": {
+        "weight": 10.1,
+        "earnings_share": 11.48,
+        "earnings_M": 107867.7,
+        "mktcap_M": 2116808.5,
+        "pe": 19.62,
+        "companies": 41
+      },
+      "Health Care": {
+        "weight": 13.11,
+        "earnings_share": 14.95,
+        "earnings_M": 140471.3,
+        "mktcap_M": 2748244.3,
+        "pe": 19.56,
+        "companies": 61
+      },
+      "Financials": {
+        "weight": 16.64,
+        "earnings_share": 23.31,
+        "earnings_M": 219015.2,
+        "mktcap_M": 3490071.2,
+        "pe": 15.94,
+        "companies": 72
+      },
+      "Info Tech": {
+        "weight": 12.99,
+        "earnings_share": 15.48,
+        "earnings_M": 145437.5,
+        "mktcap_M": 2722793.7,
+        "pe": 18.72,
+        "companies": 51
+      },
+      "Telecom": {
+        "weight": 12.69,
+        "earnings_share": 11.96,
+        "earnings_M": 112370.4,
+        "mktcap_M": 2660834.5,
+        "pe": 23.68,
+        "companies": 26
+      },
+      "Utilities": {
+        "weight": 2.93,
+        "earnings_share": 2.02,
+        "earnings_M": 18998.5,
+        "mktcap_M": 613521.2,
+        "pe": 32.29,
+        "companies": 28
+      },
+      "Real Estate": {
+        "weight": 2.75,
+        "earnings_share": 2.42,
+        "earnings_M": 22732.4,
+        "mktcap_M": 576099.6,
+        "pe": 25.34,
+        "companies": 30
+      }
+    }
+  },
+  {
+    "year": 2017,
+    "sectors": {
+      "Energy": {
+        "weight": 5.64,
+        "earnings_share": 3.92,
+        "earnings_M": 40639.1,
+        "mktcap_M": 1400580.1,
+        "pe": 34.46,
+        "companies": 34
+      },
+      "Materials": {
+        "weight": 3.47,
+        "earnings_share": 3.0,
+        "earnings_M": 31045.9,
+        "mktcap_M": 861613.5,
+        "pe": 27.75,
+        "companies": 26
+      },
+      "Industrials": {
+        "weight": 9.81,
+        "earnings_share": 10.17,
+        "earnings_M": 105361.6,
+        "mktcap_M": 2437406.0,
+        "pe": 23.13,
+        "companies": 72
+      },
+      "Cons Disc": {
+        "weight": 9.5,
+        "earnings_share": 7.69,
+        "earnings_M": 79630.9,
+        "mktcap_M": 2360324.1,
+        "pe": 29.64,
+        "companies": 69
+      },
+      "Cons Staples": {
+        "weight": 8.79,
+        "earnings_share": 9.88,
+        "earnings_M": 102294.9,
+        "mktcap_M": 2182456.0,
+        "pe": 21.33,
+        "companies": 36
+      },
+      "Health Care": {
+        "weight": 13.14,
+        "earnings_share": 9.92,
+        "earnings_M": 102765.1,
+        "mktcap_M": 3263261.2,
+        "pe": 31.75,
+        "companies": 65
+      },
+      "Financials": {
+        "weight": 16.91,
+        "earnings_share": 22.08,
+        "earnings_M": 228726.0,
+        "mktcap_M": 4199229.2,
+        "pe": 18.36,
+        "companies": 75
+      },
+      "Info Tech": {
+        "weight": 14.17,
+        "earnings_share": 13.82,
+        "earnings_M": 143092.3,
+        "mktcap_M": 3520259.8,
+        "pe": 24.6,
+        "companies": 54
+      },
+      "Telecom": {
+        "weight": 13.13,
+        "earnings_share": 14.86,
+        "earnings_M": 153863.8,
+        "mktcap_M": 3260039.9,
+        "pe": 21.19,
+        "companies": 26
+      },
+      "Utilities": {
+        "weight": 2.7,
+        "earnings_share": 2.79,
+        "earnings_M": 28860.3,
+        "mktcap_M": 671152.4,
+        "pe": 23.26,
+        "companies": 28
+      },
+      "Real Estate": {
+        "weight": 2.74,
+        "earnings_share": 1.87,
+        "earnings_M": 19392.8,
+        "mktcap_M": 680451.8,
+        "pe": 35.09,
+        "companies": 33
+      }
+    }
+  },
+  {
+    "year": 2018,
+    "sectors": {
+      "Energy": {
+        "weight": 4.76,
+        "earnings_share": 6.18,
+        "earnings_M": 74092.3,
+        "mktcap_M": 1135634.2,
+        "pe": 15.33,
+        "companies": 33
+      },
+      "Materials": {
+        "weight": 2.84,
+        "earnings_share": 3.28,
+        "earnings_M": 39310.8,
+        "mktcap_M": 677173.6,
+        "pe": 17.23,
+        "companies": 26
+      },
+      "Industrials": {
+        "weight": 8.95,
+        "earnings_share": 8.39,
+        "earnings_M": 100552.8,
+        "mktcap_M": 2137258.2,
+        "pe": 21.26,
+        "companies": 75
+      },
+      "Cons Disc": {
+        "weight": 9.52,
+        "earnings_share": 7.82,
+        "earnings_M": 93715.2,
+        "mktcap_M": 2271565.5,
+        "pe": 24.24,
+        "companies": 65
+      },
+      "Cons Staples": {
+        "weight": 8.14,
+        "earnings_share": 7.06,
+        "earnings_M": 84565.7,
+        "mktcap_M": 1943144.0,
+        "pe": 22.98,
+        "companies": 36
+      },
+      "Health Care": {
+        "weight": 13.95,
+        "earnings_share": 10.5,
+        "earnings_M": 125887.6,
+        "mktcap_M": 3331191.2,
+        "pe": 26.46,
+        "companies": 62
+      },
+      "Financials": {
+        "weight": 15.71,
+        "earnings_share": 22.46,
+        "earnings_M": 269217.0,
+        "mktcap_M": 3750020.9,
+        "pe": 13.93,
+        "companies": 78
+      },
+      "Info Tech": {
+        "weight": 17.17,
+        "earnings_share": 16.3,
+        "earnings_M": 195387.8,
+        "mktcap_M": 4097650.8,
+        "pe": 20.97,
+        "companies": 56
+      },
+      "Telecom": {
+        "weight": 13.38,
+        "earnings_share": 13.54,
+        "earnings_M": 162281.1,
+        "mktcap_M": 3193621.9,
+        "pe": 19.68,
+        "companies": 26
+      },
+      "Utilities": {
+        "weight": 2.93,
+        "earnings_share": 2.38,
+        "earnings_M": 28566.4,
+        "mktcap_M": 700268.8,
+        "pe": 24.51,
+        "companies": 28
+      },
+      "Real Estate": {
+        "weight": 2.66,
+        "earnings_share": 2.09,
+        "earnings_M": 25064.8,
+        "mktcap_M": 634133.0,
+        "pe": 25.3,
+        "companies": 33
+      }
+    }
+  },
+  {
+    "year": 2019,
+    "sectors": {
+      "Energy": {
+        "weight": 4.1,
+        "earnings_share": 1.21,
+        "earnings_M": 15562.5,
+        "mktcap_M": 1170745.6,
+        "pe": 75.23,
+        "companies": 28
+      },
+      "Materials": {
+        "weight": 2.54,
+        "earnings_share": 1.7,
+        "earnings_M": 21875.1,
+        "mktcap_M": 726025.7,
+        "pe": 33.19,
+        "companies": 28
+      },
+      "Industrials": {
+        "weight": 8.93,
+        "earnings_share": 8.59,
+        "earnings_M": 110709.1,
+        "mktcap_M": 2548167.2,
+        "pe": 23.02,
+        "companies": 73
+      },
+      "Cons Disc": {
+        "weight": 9.63,
+        "earnings_share": 7.55,
+        "earnings_M": 97353.4,
+        "mktcap_M": 2747276.4,
+        "pe": 28.22,
+        "companies": 65
+      },
+      "Cons Staples": {
+        "weight": 8.02,
+        "earnings_share": 6.3,
+        "earnings_M": 81199.2,
+        "mktcap_M": 2290004.5,
+        "pe": 28.2,
+        "companies": 36
+      },
+      "Health Care": {
+        "weight": 13.31,
+        "earnings_share": 12.5,
+        "earnings_M": 161199.1,
+        "mktcap_M": 3798918.5,
+        "pe": 23.57,
+        "companies": 62
+      },
+      "Financials": {
+        "weight": 16.81,
+        "earnings_share": 28.03,
+        "earnings_M": 361428.3,
+        "mktcap_M": 4796272.5,
+        "pe": 13.27,
+        "companies": 79
+      },
+      "Info Tech": {
+        "weight": 16.53,
+        "earnings_share": 16.45,
+        "earnings_M": 212154.3,
+        "mktcap_M": 4717374.1,
+        "pe": 22.24,
+        "companies": 57
+      },
+      "Telecom": {
+        "weight": 14.16,
+        "earnings_share": 13.07,
+        "earnings_M": 168565.8,
+        "mktcap_M": 4040775.3,
+        "pe": 23.97,
+        "companies": 28
+      },
+      "Utilities": {
+        "weight": 3.16,
+        "earnings_share": 2.82,
+        "earnings_M": 36315.7,
+        "mktcap_M": 901272.4,
+        "pe": 24.82,
+        "companies": 29
+      },
+      "Real Estate": {
+        "weight": 2.81,
+        "earnings_share": 1.8,
+        "earnings_M": 23179.5,
+        "mktcap_M": 800566.1,
+        "pe": 34.54,
+        "companies": 32
+      }
+    }
+  },
+  {
+    "year": 2020,
+    "sectors": {
+      "Energy": {
+        "weight": 2.13,
+        "earnings_share": -12.07,
+        "earnings_M": -109295.2,
+        "mktcap_M": 725080.7,
+        "pe": null,
+        "companies": 26
+      },
+      "Materials": {
+        "weight": 2.51,
+        "earnings_share": 2.14,
+        "earnings_M": 19346.6,
+        "mktcap_M": 853489.5,
+        "pe": 44.12,
+        "companies": 28
+      },
+      "Industrials": {
+        "weight": 8.19,
+        "earnings_share": 5.22,
+        "earnings_M": 47294.6,
+        "mktcap_M": 2791386.0,
+        "pe": 59.02,
+        "companies": 75
+      },
+      "Cons Disc": {
+        "weight": 12.89,
+        "earnings_share": 5.63,
+        "earnings_M": 50922.5,
+        "mktcap_M": 4390701.8,
+        "pe": 86.22,
+        "companies": 64
+      },
+      "Cons Staples": {
+        "weight": 7.32,
+        "earnings_share": 10.8,
+        "earnings_M": 97751.1,
+        "mktcap_M": 2492733.1,
+        "pe": 25.5,
+        "companies": 36
+      },
+      "Health Care": {
+        "weight": 12.8,
+        "earnings_share": 14.06,
+        "earnings_M": 127243.8,
+        "mktcap_M": 4359657.9,
+        "pe": 34.26,
+        "companies": 64
+      },
+      "Financials": {
+        "weight": 14.31,
+        "earnings_share": 27.83,
+        "earnings_M": 251876.4,
+        "mktcap_M": 4874025.4,
+        "pe": 19.35,
+        "companies": 75
+      },
+      "Info Tech": {
+        "weight": 20.51,
+        "earnings_share": 24.79,
+        "earnings_M": 224405.8,
+        "mktcap_M": 6986784.0,
+        "pe": 31.13,
+        "companies": 61
+      },
+      "Telecom": {
+        "weight": 14.48,
+        "earnings_share": 16.12,
+        "earnings_M": 145937.5,
+        "mktcap_M": 4932296.5,
+        "pe": 33.8,
+        "companies": 26
+      },
+      "Utilities": {
+        "weight": 2.58,
+        "earnings_share": 3.61,
+        "earnings_M": 32698.7,
+        "mktcap_M": 878181.9,
+        "pe": 26.86,
+        "companies": 28
+      },
+      "Real Estate": {
+        "weight": 2.31,
+        "earnings_share": 1.88,
+        "earnings_M": 17032.2,
+        "mktcap_M": 786695.9,
+        "pe": 46.19,
+        "companies": 32
+      }
+    }
+  },
+  {
+    "year": 2021,
+    "sectors": {
+      "Energy": {
+        "weight": 2.58,
+        "earnings_share": 4.49,
+        "earnings_M": 84705.3,
+        "mktcap_M": 1102422.1,
+        "pe": 13.01,
+        "companies": 24
+      },
+      "Materials": {
+        "weight": 2.43,
+        "earnings_share": 3.03,
+        "earnings_M": 57098.2,
+        "mktcap_M": 1039233.2,
+        "pe": 18.2,
+        "companies": 28
+      },
+      "Industrials": {
+        "weight": 7.7,
+        "earnings_share": 6.28,
+        "earnings_M": 118370.5,
+        "mktcap_M": 3290929.4,
+        "pe": 27.8,
+        "companies": 75
+      },
+      "Cons Disc": {
+        "weight": 12.3,
+        "earnings_share": 8.07,
+        "earnings_M": 152138.6,
+        "mktcap_M": 5256295.5,
+        "pe": 34.55,
+        "companies": 60
+      },
+      "Cons Staples": {
+        "weight": 6.46,
+        "earnings_share": 5.84,
+        "earnings_M": 110049.4,
+        "mktcap_M": 2763217.9,
+        "pe": 25.11,
+        "companies": 35
+      },
+      "Health Care": {
+        "weight": 12.8,
+        "earnings_share": 12.41,
+        "earnings_M": 233904.3,
+        "mktcap_M": 5473362.2,
+        "pe": 23.4,
+        "companies": 65
+      },
+      "Financials": {
+        "weight": 13.72,
+        "earnings_share": 24.76,
+        "earnings_M": 466928.9,
+        "mktcap_M": 5863494.7,
+        "pe": 12.56,
+        "companies": 77
+      },
+      "Info Tech": {
+        "weight": 21.55,
+        "earnings_share": 16.64,
+        "earnings_M": 313846.3,
+        "mktcap_M": 9211396.6,
+        "pe": 29.35,
+        "companies": 66
+      },
+      "Telecom": {
+        "weight": 15.42,
+        "earnings_share": 15.07,
+        "earnings_M": 284173.1,
+        "mktcap_M": 6593605.2,
+        "pe": 23.2,
+        "companies": 27
+      },
+      "Utilities": {
+        "weight": 2.35,
+        "earnings_share": 1.94,
+        "earnings_M": 36570.8,
+        "mktcap_M": 1006314.6,
+        "pe": 27.52,
+        "companies": 28
+      },
+      "Real Estate": {
+        "weight": 2.69,
+        "earnings_share": 1.47,
+        "earnings_M": 27744.5,
+        "mktcap_M": 1148589.0,
+        "pe": 41.4,
+        "companies": 30
+      }
+    }
+  },
+  {
+    "year": 2022,
+    "sectors": {
+      "Energy": {
+        "weight": 4.82,
+        "earnings_share": 13.09,
+        "earnings_M": 213353.5,
+        "mktcap_M": 1712592.3,
+        "pe": 8.03,
+        "companies": 23
+      },
+      "Materials": {
+        "weight": 2.46,
+        "earnings_share": 3.64,
+        "earnings_M": 59393.5,
+        "mktcap_M": 874845.0,
+        "pe": 14.73,
+        "companies": 29
+      },
+      "Industrials": {
+        "weight": 8.28,
+        "earnings_share": 8.2,
+        "earnings_M": 133682.7,
+        "mktcap_M": 2942133.8,
+        "pe": 22.01,
+        "companies": 74
+      },
+      "Cons Disc": {
+        "weight": 9.11,
+        "earnings_share": 5.7,
+        "earnings_M": 92961.1,
+        "mktcap_M": 3240139.2,
+        "pe": 34.85,
+        "companies": 58
+      },
+      "Cons Staples": {
+        "weight": 8.07,
+        "earnings_share": 6.89,
+        "earnings_M": 112327.3,
+        "mktcap_M": 2868640.1,
+        "pe": 25.54,
+        "companies": 36
+      },
+      "Health Care": {
+        "weight": 14.57,
+        "earnings_share": 12.98,
+        "earnings_M": 211636.2,
+        "mktcap_M": 5180427.2,
+        "pe": 24.48,
+        "companies": 63
+      },
+      "Financials": {
+        "weight": 13.98,
+        "earnings_share": 15.14,
+        "earnings_M": 246777.1,
+        "mktcap_M": 4969271.2,
+        "pe": 20.14,
+        "companies": 75
+      },
+      "Info Tech": {
+        "weight": 22.34,
+        "earnings_share": 20.09,
+        "earnings_M": 327585.1,
+        "mktcap_M": 7941521.3,
+        "pe": 24.24,
+        "companies": 64
+      },
+      "Telecom": {
+        "weight": 10.89,
+        "earnings_share": 10.09,
+        "earnings_M": 164549.1,
+        "mktcap_M": 3870658.7,
+        "pe": 23.52,
+        "companies": 27
+      },
+      "Utilities": {
+        "weight": 2.9,
+        "earnings_share": 2.39,
+        "earnings_M": 38891.7,
+        "mktcap_M": 1032055.3,
+        "pe": 26.54,
+        "companies": 30
+      },
+      "Real Estate": {
+        "weight": 2.59,
+        "earnings_share": 1.79,
+        "earnings_M": 29228.3,
+        "mktcap_M": 921779.2,
+        "pe": 31.54,
+        "companies": 32
+      }
+    }
+  },
+  {
+    "year": 2023,
+    "sectors": {
+      "Energy": {
+        "weight": 3.66,
+        "earnings_share": 7.96,
+        "earnings_M": 144941.0,
+        "mktcap_M": 1585958.6,
+        "pe": 10.94,
+        "companies": 23
+      },
+      "Materials": {
+        "weight": 2.29,
+        "earnings_share": 1.85,
+        "earnings_M": 33698.8,
+        "mktcap_M": 989410.0,
+        "pe": 29.36,
+        "companies": 29
+      },
+      "Industrials": {
+        "weight": 8.12,
+        "earnings_share": 8.26,
+        "earnings_M": 150373.0,
+        "mktcap_M": 3514213.6,
+        "pe": 23.37,
+        "companies": 77
+      },
+      "Cons Disc": {
+        "weight": 10.88,
+        "earnings_share": 9.08,
+        "earnings_M": 165463.9,
+        "mktcap_M": 4708691.3,
+        "pe": 28.46,
+        "companies": 56
+      },
+      "Cons Staples": {
+        "weight": 6.49,
+        "earnings_share": 6.34,
+        "earnings_M": 115453.1,
+        "mktcap_M": 2809146.8,
+        "pe": 24.33,
+        "companies": 39
+      },
+      "Health Care": {
+        "weight": 11.98,
+        "earnings_share": 9.92,
+        "earnings_M": 180663.9,
+        "mktcap_M": 5188003.1,
+        "pe": 28.72,
+        "companies": 66
+      },
+      "Financials": {
+        "weight": 12.89,
+        "earnings_share": 21.02,
+        "earnings_M": 382800.2,
+        "mktcap_M": 5582039.8,
+        "pe": 14.58,
+        "companies": 73
+      },
+      "Info Tech": {
+        "weight": 26.05,
+        "earnings_share": 18.3,
+        "earnings_M": 333251.1,
+        "mktcap_M": 11276907.6,
+        "pe": 33.84,
+        "companies": 66
+      },
+      "Telecom": {
+        "weight": 13.09,
+        "earnings_share": 13.09,
+        "earnings_M": 238456.0,
+        "mktcap_M": 5665018.3,
+        "pe": 23.76,
+        "companies": 23
+      },
+      "Utilities": {
+        "weight": 2.17,
+        "earnings_share": 2.74,
+        "earnings_M": 49858.6,
+        "mktcap_M": 938466.0,
+        "pe": 18.82,
+        "companies": 30
+      },
+      "Real Estate": {
+        "weight": 2.39,
+        "earnings_share": 1.46,
+        "earnings_M": 26559.1,
+        "mktcap_M": 1033634.3,
+        "pe": 38.92,
+        "companies": 32
+      }
+    }
+  },
+  {
+    "year": 2024,
+    "sectors": {
+      "Energy": {
+        "weight": 2.99,
+        "earnings_share": 5.45,
+        "earnings_M": 109077.6,
+        "mktcap_M": 1627172.4,
+        "pe": 14.92,
+        "companies": 22
+      },
+      "Materials": {
+        "weight": 1.77,
+        "earnings_share": 1.97,
+        "earnings_M": 39401.6,
+        "mktcap_M": 963590.3,
+        "pe": 24.46,
+        "companies": 28
+      },
+      "Industrials": {
+        "weight": 7.4,
+        "earnings_share": 8.12,
+        "earnings_M": 162413.5,
+        "mktcap_M": 4030490.5,
+        "pe": 24.82,
+        "companies": 79
+      },
+      "Cons Disc": {
+        "weight": 11.42,
+        "earnings_share": 9.2,
+        "earnings_M": 184195.0,
+        "mktcap_M": 6218049.9,
+        "pe": 33.76,
+        "companies": 54
+      },
+      "Cons Staples": {
+        "weight": 5.95,
+        "earnings_share": 5.51,
+        "earnings_M": 110352.3,
+        "mktcap_M": 3240622.8,
+        "pe": 29.37,
+        "companies": 38
+      },
+      "Health Care": {
+        "weight": 9.62,
+        "earnings_share": 7.62,
+        "earnings_M": 152510.2,
+        "mktcap_M": 5235728.7,
+        "pe": 34.33,
+        "companies": 65
+      },
+      "Financials": {
+        "weight": 13.34,
+        "earnings_share": 22.65,
+        "earnings_M": 453184.7,
+        "mktcap_M": 7260089.9,
+        "pe": 16.02,
+        "companies": 75
+      },
+      "Info Tech": {
+        "weight": 29.3,
+        "earnings_share": 19.2,
+        "earnings_M": 384284.7,
+        "mktcap_M": 15947753.3,
+        "pe": 41.5,
+        "companies": 70
+      },
+      "Telecom": {
+        "weight": 14.09,
+        "earnings_share": 16.16,
+        "earnings_M": 323382.3,
+        "mktcap_M": 7672648.4,
+        "pe": 23.73,
+        "companies": 22
+      },
+      "Utilities": {
+        "weight": 2.14,
+        "earnings_share": 3.0,
+        "earnings_M": 59996.7,
+        "mktcap_M": 1164539.0,
+        "pe": 19.41,
+        "companies": 31
+      },
+      "Real Estate": {
+        "weight": 1.98,
+        "earnings_share": 1.11,
+        "earnings_M": 22280.9,
+        "mktcap_M": 1077618.8,
+        "pe": 48.37,
+        "companies": 31
+      }
+    }
+  }
+]

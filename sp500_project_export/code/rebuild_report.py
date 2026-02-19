@@ -1,23 +1,35 @@
 """
-重建完整 HTML 报告：加入左侧导航 + 公司级数据
+重建完整 HTML 报告：加入左侧导航 + 公司级数据 + 三层回报分解
 """
 import json
+import os
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 # Load existing analysis data
-with open("sp500_analysis.json") as f:
+with open(os.path.join(DATA_DIR, "sp500_analysis.json")) as f:
     analysis = json.load(f)
 
 # Load turnover data
-with open("turnover_data.json") as f:
+with open(os.path.join(DATA_DIR, "turnover_data.json")) as f:
     turnover = json.load(f)
 
 # Load duration distribution
-with open("duration_dist.json") as f:
+with open(os.path.join(DATA_DIR, "duration_dist.json")) as f:
     duration_dist = json.load(f)
+
+# Load 3-level decomposition data
+decomp_path = os.path.join(DATA_DIR, "sp500_3level_decomposition.json")
+if os.path.exists(decomp_path):
+    with open(decomp_path) as f:
+        decomposition = json.load(f)
+else:
+    decomposition = None
 
 data_json = json.dumps(analysis)
 turnover_json = json.dumps(turnover)
 duration_json = json.dumps(duration_dist)
+decomp_json = json.dumps(decomposition) if decomposition else 'null'
 
 html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -283,7 +295,15 @@ html = f"""<!DOCTYPE html>
   </div>
 
   <div class="nav-group">
-    <div class="nav-group-title">Part IV · 结论</div>
+    <div class="nav-group-title">Part IV · 回报分解</div>
+    <a class="nav-link" href="#decomp1"><span class="nav-icon">📊</span>年度回报分解</a>
+    <a class="nav-link" href="#decomp2"><span class="nav-icon">📉</span>均值回归收敛</a>
+    <a class="nav-link" href="#decomp3"><span class="nav-icon">🏭</span>行业贡献分解</a>
+    <a class="nav-link" href="#decomp4"><span class="nav-icon">✅</span>三层加总验证</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Part V · 结论</div>
     <a class="nav-link" href="#mechanism"><span class="nav-icon">⚙️</span>核心机制解析</a>
     <a class="nav-link" href="#data"><span class="nav-icon">📋</span>完整年度数据</a>
   </div>
@@ -430,7 +450,55 @@ html = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- ========== PART IV: CONCLUSIONS ========== -->
+  <!-- ========== PART IV: RETURN DECOMPOSITION (3-Level) ========== -->
+
+  <div class="section" id="decomp1">
+    <h2>年度回报分解：盈利增长 + PE 扩张 + 股息</h2>
+    <div class="desc">S&P 500 每年总回报的三因子分解 (1985-2024, Compustat 公司级别数据)</div>
+    <div class="chart-container tall"><canvas id="chartDecomp1"></canvas></div>
+    <div style="margin-top:12px;font-size:0.82rem;color:#6b7a8d;line-height:1.7">
+      <b>公式：</b>总回报 = 盈利增长 + PE 扩张 + 股息率 &nbsp;|&nbsp;
+      数据来源：Compustat 公司年报聚合，覆盖 ~500 家 S&P 500 成分股<br>
+      <b>注：</b>盈利恢复年份（如2003/2009）因前期盈利趋近零，分解值极端，图表截断于±100%，悬停可见实际值
+    </div>
+  </div>
+
+  <div class="section" id="decomp2">
+    <h2>均值回归：持有时间越长，回报越收敛</h2>
+    <div class="desc">5/10/20 年滚动窗口的回报标准差对比</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="chart-container"><canvas id="chartDecomp2a"></canvas></div>
+      <div class="chart-container"><canvas id="chartDecomp2b"></canvas></div>
+    </div>
+    <div id="mrSummary" style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
+  </div>
+
+  <div class="section" id="decomp3">
+    <h2>行业贡献分解</h2>
+    <div class="desc">各 GICS 行业对 S&P 500 总回报的贡献 (按市值加权)</div>
+    <div style="margin-bottom:10px">
+      <select id="decompYearSelect" style="background:#1a1f2e;color:#e0e6ed;border:1px solid rgba(255,255,255,0.1);padding:6px 12px;border-radius:6px;font-size:0.85rem">
+      </select>
+    </div>
+    <div class="chart-container tall"><canvas id="chartDecomp3"></canvas></div>
+  </div>
+
+  <div class="section" id="decomp4">
+    <h2>三层加总验证：公司 = 行业 = 总量</h2>
+    <div class="desc">验证分析数据的内部一致性：个体公司之和 = GICS 行业之和 = S&P 500 总量</div>
+    <div class="data-table-wrapper">
+      <table id="verifyTable">
+        <thead><tr>
+          <th>年份</th><th>总量盈利($B)</th><th>公司盈利($B)</th><th>差值</th>
+          <th>总量市值($B)</th><th>公司市值($B)</th><th>差值</th><th>回报差(bp)</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="verifyResult" style="margin-top:10px;font-size:0.85rem"></div>
+  </div>
+
+  <!-- ========== PART V: CONCLUSIONS ========== -->
 
   <div class="section" id="mechanism">
     <h2>核心机制：为什么个股兴衰，指数却稳定在 ~6.8%？</h2>
@@ -482,6 +550,7 @@ html = f"""<!DOCTYPE html>
 const DATA = {data_json};
 const TURNOVER = {turnover_json};
 const DURATION = {duration_json};
+const DECOMP = {decomp_json};
 
 Chart.defaults.color = '#6b7a8d';
 Chart.defaults.borderColor = 'rgba(255,255,255,0.05)';
@@ -891,12 +960,261 @@ function updateRollingChart() {{
     tbody.appendChild(tr);
   }});
 }})();
+
+// ============================================================
+// DECOMPOSITION CHARTS (Part IV - 3-Level Analysis)
+// ============================================================
+if (DECOMP) {{
+
+// CHART D1: Annual Return Decomposition (Stacked Bar)
+// Cap extreme values at ±100% for readability (earnings rebound years like 2003, 2009)
+(function() {{
+  const agg = DECOMP.aggregate;
+  const CAP = 100;
+  const cap = v => v == null ? 0 : Math.max(-CAP, Math.min(CAP, +(v * 100).toFixed(2)));
+  const raw = v => v == null ? 0 : +(v * 100).toFixed(2);
+  const rawEG = agg.map(d => raw(d.earnings_growth));
+  const rawPE = agg.map(d => raw(d.pe_expansion));
+  const ctx = document.getElementById('chartDecomp1').getContext('2d');
+  const chart = new Chart(ctx, {{
+    type: 'bar',
+    data: {{
+      labels: agg.map(d => d.year),
+      datasets: [
+        {{
+          label: 'Earnings Growth',
+          data: agg.map(d => cap(d.earnings_growth)),
+          backgroundColor: agg.map(d => (d.earnings_growth != null && Math.abs(d.earnings_growth * 100) > CAP) ? '#3b82f6' : '#60a5fa'),
+          stack: 'stack1',
+          hidden: false,
+        }},
+        {{
+          label: 'PE Expansion',
+          data: agg.map(d => cap(d.pe_expansion)),
+          backgroundColor: agg.map(d => (d.pe_expansion != null && Math.abs(d.pe_expansion * 100) > CAP) ? '#7c3aed' : '#a78bfa'),
+          stack: 'stack1',
+          hidden: false,
+        }},
+        {{
+          label: 'Dividend Yield',
+          data: agg.map(d => d.dividend_yield != null ? +(d.dividend_yield * 100).toFixed(2) : 0),
+          backgroundColor: '#34d399',
+          stack: 'stack1',
+          hidden: false,
+        }},
+        {{
+          label: 'Total Return',
+          data: agg.map(d => d.total_return != null ? +(d.total_return * 100).toFixed(2) : null),
+          type: 'line',
+          borderColor: '#fbbf24',
+          backgroundColor: 'transparent',
+          borderWidth: 2,
+          pointRadius: 2,
+          tension: 0.3,
+        }}
+      ]
+    }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      interaction: {{ intersect: false, mode: 'index' }},
+      plugins: {{
+        legend: {{ position: 'top', labels: {{ usePointStyle: true, padding: 12 }} }},
+        tooltip: {{ callbacks: {{
+          title: items => items[0].label + ' Year',
+          label: function(item) {{
+            let val = item.parsed.y;
+            let suffix = '';
+            if (item.datasetIndex === 0 && Math.abs(rawEG[item.dataIndex]) > CAP) {{
+              val = rawEG[item.dataIndex]; suffix = ' (capped in chart)';
+            }} else if (item.datasetIndex === 1 && Math.abs(rawPE[item.dataIndex]) > CAP) {{
+              val = rawPE[item.dataIndex]; suffix = ' (capped in chart)';
+            }}
+            return item.dataset.label + ': ' + (val >= 0 ? '+' : '') + val.toFixed(2) + '%' + suffix;
+          }}
+        }} }}
+      }},
+      scales: {{
+        x: {{ stacked: true, ticks: {{ maxRotation: 0, autoSkip: true, maxTicksLimit: 20, font: {{ size: 10 }} }}, grid: {{ display: false }} }},
+        y: {{ stacked: true, suggestedMin: -80, suggestedMax: 80, ticks: {{ callback: v => v + '%' }}, grid: {{ color: 'rgba(255,255,255,0.04)' }} }}
+      }}
+    }}
+  }});
+  // Force all datasets visible (workaround for Chart.js off-screen init issue)
+  for (let i = 0; i < chart.data.datasets.length; i++) {{
+    chart.getDatasetMeta(i).hidden = null;
+  }}
+  chart.update('none');
+}})();
+
+// CHART D2a: Rolling Window Total Return (Line)
+(function() {{
+  const r5 = DECOMP.rolling['5'] || [];
+  const r10 = DECOMP.rolling['10'] || [];
+  const r20 = DECOMP.rolling['20'] || [];
+  const ctx = document.getElementById('chartDecomp2a').getContext('2d');
+  new Chart(ctx, {{
+    type: 'line',
+    data: {{
+      labels: r5.map(d => d.end),
+      datasets: [
+        {{ label: '5-Year', data: r5.map(d => d.ann_total_return), borderColor: '#f87171', borderWidth: 1.5, pointRadius: 0, tension: 0.3 }},
+        {{ label: '10-Year', data: r10.map(d => d.ann_total_return), borderColor: '#fbbf24', borderWidth: 1.5, pointRadius: 0, tension: 0.3 }},
+        {{ label: '20-Year', data: r20.map(d => d.ann_total_return), borderColor: '#34d399', borderWidth: 2, pointRadius: 0, tension: 0.3 }},
+      ]
+    }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      plugins: {{
+        title: {{ display: true, text: 'Annualized Total Return by Holding Period', color: '#8896a8', font: {{ size: 12 }} }},
+        legend: {{ position: 'top', labels: {{ usePointStyle: true, padding: 10 }} }},
+        tooltip: {{ callbacks: {{ label: item => item.dataset.label + ': ' + item.parsed.y.toFixed(2) + '%' }} }}
+      }},
+      scales: {{
+        x: {{ ticks: {{ maxRotation: 0, autoSkip: true, maxTicksLimit: 12, font: {{ size: 10 }} }}, grid: {{ display: false }} }},
+        y: {{ ticks: {{ callback: v => v + '%' }}, grid: {{ color: 'rgba(255,255,255,0.04)' }} }}
+      }}
+    }}
+  }});
+}})();
+
+// CHART D2b: Mean Reversion - Std Dev convergence (Bar)
+(function() {{
+  const mr = DECOMP.mean_reversion;
+  const windows = ['5', '10', '20'];
+  const ctx = document.getElementById('chartDecomp2b').getContext('2d');
+  new Chart(ctx, {{
+    type: 'bar',
+    data: {{
+      labels: windows.map(w => w + ' Years'),
+      datasets: [
+        {{
+          label: 'Std Dev (%)',
+          data: windows.map(w => mr[w] ? mr[w].std : 0),
+          backgroundColor: ['#f87171', '#fbbf24', '#34d399'],
+          borderRadius: 4,
+        }},
+        {{
+          label: 'Range (%)',
+          data: windows.map(w => mr[w] ? mr[w].range : 0),
+          backgroundColor: ['rgba(248,113,113,0.3)', 'rgba(251,191,36,0.3)', 'rgba(52,211,153,0.3)'],
+          borderRadius: 4,
+        }}
+      ]
+    }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      plugins: {{
+        title: {{ display: true, text: 'Return Volatility Shrinks with Holding Period', color: '#8896a8', font: {{ size: 12 }} }},
+        legend: {{ position: 'top', labels: {{ usePointStyle: true, padding: 10 }} }},
+        tooltip: {{ callbacks: {{ label: item => item.dataset.label + ': ' + item.parsed.y.toFixed(2) + '%' }} }}
+      }},
+      scales: {{
+        x: {{ grid: {{ display: false }} }},
+        y: {{ ticks: {{ callback: v => v + '%' }}, grid: {{ color: 'rgba(255,255,255,0.04)' }} }}
+      }}
+    }}
+  }});
+
+  // Summary cards
+  const container = document.getElementById('mrSummary');
+  windows.forEach((w, i) => {{
+    const s = mr[w];
+    if (!s) return;
+    const colors = ['#f87171', '#fbbf24', '#34d399'];
+    container.innerHTML += `<div class="card" style="text-align:center">
+      <div style="font-size:2rem;font-weight:700;color:${{colors[i]}}">${{s.std.toFixed(1)}}%</div>
+      <div class="label">${{w}}-Year Std Dev</div>
+      <div style="font-size:0.78rem;color:#4a5568;margin-top:4px">Range: ${{s.min.toFixed(1)}}% ~ ${{s.max.toFixed(1)}}%</div>
+    </div>`;
+  }});
+}})();
+
+// CHART D3: Industry Contribution (Horizontal Bar, switchable by year)
+(function() {{
+  const sectors = DECOMP.sectors;
+  const select = document.getElementById('decompYearSelect');
+  const years = [...new Set(sectors.map(s => s.year))].sort();
+  years.forEach(y => {{
+    const opt = document.createElement('option');
+    opt.value = y; opt.text = y + ' Year';
+    if (y === 2024) opt.selected = true;
+    select.appendChild(opt);
+  }});
+
+  let chart = null;
+  function renderYear(year) {{
+    const data = sectors.filter(s => s.year === year && s.sector !== 'XX')
+      .sort((a, b) => (b.contrib_price || 0) - (a.contrib_price || 0));
+    const labels = data.map(d => d.sector_name);
+    const contribPrice = data.map(d => d.contrib_price != null ? +(d.contrib_price * 100).toFixed(2) : 0);
+    const contribDiv = data.map(d => d.contrib_div != null ? +(d.contrib_div * 100).toFixed(2) : 0);
+
+    if (chart) chart.destroy();
+    const ctx = document.getElementById('chartDecomp3').getContext('2d');
+    chart = new Chart(ctx, {{
+      type: 'bar',
+      data: {{
+        labels: labels,
+        datasets: [
+          {{ label: 'Price Return Contribution', data: contribPrice, backgroundColor: '#60a5fa', borderRadius: 3 }},
+          {{ label: 'Dividend Contribution', data: contribDiv, backgroundColor: '#34d399', borderRadius: 3 }},
+        ]
+      }},
+      options: {{
+        responsive: true, maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {{
+          legend: {{ position: 'top', labels: {{ usePointStyle: true, padding: 10 }} }},
+          tooltip: {{ callbacks: {{ label: item => item.dataset.label + ': ' + (item.parsed.x >= 0 ? '+' : '') + item.parsed.x.toFixed(2) + '%' }} }}
+        }},
+        scales: {{
+          x: {{ ticks: {{ callback: v => v + '%' }}, grid: {{ color: 'rgba(255,255,255,0.04)' }} }},
+          y: {{ grid: {{ display: false }} }}
+        }}
+      }}
+    }});
+  }}
+
+  select.addEventListener('change', () => renderYear(+select.value));
+  renderYear(2024);
+}})();
+
+// Verification Table
+(function() {{
+  const vdata = DECOMP.verification;
+  const tbody = document.querySelector('#verifyTable tbody');
+  vdata.forEach(v => {{
+    const tr = document.createElement('tr');
+    const diffNi = v.diff_ni.toFixed(1);
+    const diffMc = v.diff_mktcap.toFixed(1);
+    const diffRet = v.diff_return != null ? v.diff_return.toFixed(1) : 'N/A';
+    tr.innerHTML = `<td>${{v.year}}</td>
+      <td>${{(v.agg_ni/1000).toFixed(1)}}</td><td>${{(v.sum_company_ni/1000).toFixed(1)}}</td>
+      <td class="${{Math.abs(v.diff_ni) < 1 ? 'pos' : 'neg'}}">${{diffNi}}</td>
+      <td>${{(v.agg_mktcap/1000).toLocaleString('en',{{maximumFractionDigits:0}})}}</td>
+      <td>${{(v.sum_company_mktcap/1000).toLocaleString('en',{{maximumFractionDigits:0}})}}</td>
+      <td class="${{Math.abs(v.diff_mktcap) < 1 ? 'pos' : 'neg'}}">${{diffMc}}</td>
+      <td class="${{Math.abs(v.diff_return||0) < 1 ? 'pos' : 'neg'}}">${{diffRet}}</td>`;
+    tbody.appendChild(tr);
+  }});
+
+  const maxNi = Math.max(...vdata.map(v => Math.abs(v.diff_ni)));
+  const maxMc = Math.max(...vdata.map(v => Math.abs(v.diff_mktcap)));
+  const el = document.getElementById('verifyResult');
+  const ok = maxNi < 1 && maxMc < 1;
+  el.innerHTML = `<span style="color:${{ok ? '#34d399' : '#f87171'}};font-weight:600">${{ok ? '✓ Verification Passed' : '✗ Check Required'}}</span>
+    &nbsp;—&nbsp; Max earnings diff: $${{maxNi.toFixed(1)}}M, Max market cap diff: $${{maxMc.toFixed(1)}}M`;
+}})();
+
+}} // end if (DECOMP)
+
 </script>
 </body>
 </html>"""
 
-output_path = "/sessions/quirky-tender-franklin/mnt/outputs/sp500_mean_reversion.html"
+output_path = os.path.join(os.path.dirname(__file__), '..', 'report', 'sp500_mean_reversion.html')
 with open(output_path, 'w') as f:
     f.write(html)
+print(f"Report written to: {output_path}")
 
 print(f"✅ 文件已生成: {len(html):,} bytes")

@@ -1,3 +1,10 @@
 .DS_Store
 __pycache__/
 *.pyc
+.openclaw/
+
+# Large CRSP/Compustat raw data files (too big for GitHub)
+sp500_project_export/data/crsp_compustat/crsp_monthly.csv
+sp500_project_export/data/crsp_compustat/compustat_annual.csv
+sp500_project_export/data/crsp_compustat/compustat_annual.csv.zip
+sp500_project_export/data/crsp_compustat/crsp_month_csv.zip
