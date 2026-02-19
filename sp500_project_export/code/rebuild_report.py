@@ -471,6 +471,14 @@ html = f"""<!DOCTYPE html>
       <div class="chart-container"><canvas id="chartDecomp2b"></canvas></div>
     </div>
     <div id="mrSummary" style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px"></div>
+    <div style="margin-top:24px">
+      <h3 style="color:#e0e6ed;font-size:1.05rem;margin-bottom:6px">回报来源分解：持有越久，PE 扩张越趋近零</h3>
+      <div class="desc">不同持有期的平均年化回报拆分 — 盈利增长 + PE 扩张 + 股息</div>
+      <div class="chart-container"><canvas id="chartDecomp2c"></canvas></div>
+      <div style="margin-top:8px;font-size:0.82rem;color:#6b7a8d;line-height:1.7">
+        <b>核心结论：</b>20年窗口 PE 扩张趋近零 → 长期回报 ≈ 盈利增长 + 股息。短期"赚估值的钱"不可持续，长期只有"赚盈利的钱"。
+      </div>
+    </div>
   </div>
 
   <div class="section" id="decomp3">
@@ -1126,6 +1134,81 @@ if (DECOMP) {{
       <div class="label">${{w}}-Year Std Dev</div>
       <div style="font-size:0.78rem;color:#4a5568;margin-top:4px">Range: ${{s.min.toFixed(1)}}% ~ ${{s.max.toFixed(1)}}%</div>
     </div>`;
+  }});
+}})();
+
+// CHART D2c: Return Decomposition by Holding Period (Stacked Bar)
+(function() {{
+  const rolling = DECOMP.rolling;
+  // Compute average decomposition for each window
+  function avg(arr, key) {{
+    const vals = arr.filter(r => r[key] != null).map(r => r[key]);
+    return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
+  }}
+  const windows = [
+    {{ label: '5年窗口', eg: avg(rolling['5']||[], 'ann_earnings_growth'), pe: avg(rolling['5']||[], 'ann_pe_expansion'), dy: avg(rolling['5']||[], 'ann_dividend_yield') }},
+    {{ label: '10年窗口', eg: avg(rolling['10']||[], 'ann_earnings_growth'), pe: avg(rolling['10']||[], 'ann_pe_expansion'), dy: avg(rolling['10']||[], 'ann_dividend_yield') }},
+    {{ label: '20年窗口', eg: avg(rolling['20']||[], 'ann_earnings_growth'), pe: avg(rolling['20']||[], 'ann_pe_expansion'), dy: avg(rolling['20']||[], 'ann_dividend_yield') }},
+  ];
+  // Add full period
+  const agg = DECOMP.aggregate;
+  const yrs = agg.map(d => d.year).sort((a,b) => a - b);
+  const first = agg.find(d => d.year === yrs[0]);
+  const last = agg.find(d => d.year === yrs[yrs.length - 1]);
+  const n = yrs[yrs.length - 1] - yrs[0];
+  const fullEarn = Math.pow(last.ni / first.ni_prior, 1/n) - 1;
+  const fullPrice = Math.pow(last.mktcap / first.mktcap_prior, 1/n) - 1;
+  const fullPE = (1 + fullPrice) / (1 + fullEarn) - 1;
+  const fullDiv = agg.reduce((s, d) => s + (d.dividend_yield || 0), 0) / agg.length;
+  windows.push({{ label: '全期(39年)', eg: fullEarn * 100, pe: fullPE * 100, dy: fullDiv * 100 }});
+  // First 3 are already in % from rolling data, full period was raw → converted above
+  // Actually rolling data is already in %, fix:
+  // rolling ann_earnings_growth is already in percentage points? Let me check...
+  // No - rolling data stores raw decimals... let me check the JSON
+  // From the earlier output: 20yr avg total return 9.88% - that matches rolling output
+  // So rolling data IS in percentage points already
+
+  const ctx = document.getElementById('chartDecomp2c').getContext('2d');
+  new Chart(ctx, {{
+    type: 'bar',
+    data: {{
+      labels: windows.map(w => w.label),
+      datasets: [
+        {{ label: '盈利增长', data: windows.map(w => +w.eg.toFixed(2)), backgroundColor: '#60a5fa' }},
+        {{ label: 'PE 扩张', data: windows.map(w => +w.pe.toFixed(2)), backgroundColor: '#a78bfa' }},
+        {{ label: '股息率', data: windows.map(w => +w.dy.toFixed(2)), backgroundColor: '#34d399' }},
+      ]
+    }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      indexAxis: 'y',
+      plugins: {{
+        legend: {{ position: 'top', labels: {{ usePointStyle: true, padding: 12 }} }},
+        tooltip: {{
+          callbacks: {{
+            label: item => item.dataset.label + ': ' + (item.parsed.x >= 0 ? '+' : '') + item.parsed.x.toFixed(2) + '%',
+            afterBody: function(items) {{
+              const idx = items[0].dataIndex;
+              const w = windows[idx];
+              const total = w.eg + w.pe + w.dy;
+              return ['─────────', '总回报: ' + total.toFixed(2) + '%'];
+            }}
+          }}
+        }}
+      }},
+      scales: {{
+        x: {{
+          stacked: true,
+          ticks: {{ callback: v => v + '%' }},
+          grid: {{ color: 'rgba(255,255,255,0.04)' }},
+          title: {{ display: true, text: '年化回报 (%)', color: '#6b7a8d' }}
+        }},
+        y: {{
+          stacked: true,
+          grid: {{ display: false }}
+        }}
+      }}
+    }}
   }});
 }})();
 
