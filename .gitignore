@@ -3,8 +3,8 @@ __pycache__/
 *.pyc
 .openclaw/
 
-# Large CRSP/Compustat raw data files (too big for GitHub)
-sp500_project_export/data/crsp_compustat/crsp_monthly.csv
-sp500_project_export/data/crsp_compustat/compustat_annual.csv
-sp500_project_export/data/crsp_compustat/compustat_annual.csv.zip
-sp500_project_export/data/crsp_compustat/crsp_month_csv.zip
+# Data files — keep local only
+sp500_project_export/data/crsp_compustat/
+sp500_project_export/data/sp500_3level_decomposition.json
+sp500_project_export/data/sp500_company_analysis.json
+sp500_project_export/data/sp500_industry_analysis.json
