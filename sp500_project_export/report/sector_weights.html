@@ -83,12 +83,12 @@ new Chart(ctx, {
       label: s.name,
       data: s.data,
       borderColor: s.color,
-      backgroundColor: s.color.replace(')', ', 0.08)').replace('rgb', 'rgba'),
+      backgroundColor: s.color + '99',
       fill: true,
       tension: 0.3,
       pointRadius: 0,
-      pointHoverRadius: 4,
-      borderWidth: 2,
+      pointHoverRadius: 3,
+      borderWidth: 1,
     }))
   },
   options: {
@@ -113,10 +113,10 @@ new Chart(ctx, {
         grid: { display: false }
       },
       y: {
-        stacked: false,
+        stacked: true,
         min: 0,
-        max: 45,
-        ticks: { callback: v => v + '%', stepSize: 5 },
+        max: 100,
+        ticks: { callback: v => v + '%', stepSize: 10 },
         grid: { color: 'rgba(255,255,255,0.04)' }
       }
     }
