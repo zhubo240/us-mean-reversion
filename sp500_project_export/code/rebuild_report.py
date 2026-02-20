@@ -26,10 +26,19 @@ if os.path.exists(decomp_path):
 else:
     decomposition = None
 
+# Load Shiller complete data (1871-2025)
+shiller_path = os.path.join(DATA_DIR, "shiller_complete.json")
+if os.path.exists(shiller_path):
+    with open(shiller_path) as f:
+        shiller_data = json.load(f)
+else:
+    shiller_data = None
+
 data_json = json.dumps(analysis)
 turnover_json = json.dumps(turnover)
 duration_json = json.dumps(duration_dist)
 decomp_json = json.dumps(decomposition) if decomposition else 'null'
+shiller_json = json.dumps(shiller_data) if shiller_data else 'null'
 
 html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -298,6 +307,9 @@ html = f"""<!DOCTYPE html>
     <div class="nav-group-title">Part IV · 回报分解</div>
     <a class="nav-link" href="#decomp1"><span class="nav-icon">📊</span>年度回报分解</a>
     <a class="nav-link" href="#decomp2"><span class="nav-icon">📉</span>均值回归收敛</a>
+    <a class="nav-link" href="#shiller20"><span class="nav-icon">📈</span>153年滚动分解</a>
+    <a class="nav-link" href="#shillerLog"><span class="nav-icon">📐</span>对数累积增长</a>
+    <a class="nav-link" href="#sectorDecomp"><span class="nav-icon">🔀</span>行业回报分解</a>
     <a class="nav-link" href="#decomp3"><span class="nav-icon">🏭</span>行业贡献分解</a>
     <a class="nav-link" href="#decomp4"><span class="nav-icon">✅</span>三层加总验证</a>
   </div>
@@ -481,6 +493,45 @@ html = f"""<!DOCTYPE html>
     </div>
   </div>
 
+  <div class="section" id="shiller20">
+    <h2>153年均值回归：20年滚动回报分解 (Shiller 1871-2025)</h2>
+    <div class="desc">每个数据点 = 过去20年的年化回报率及其三因子分解 &nbsp;|&nbsp; 总回报 = 盈利增长 + PE 扩张 + 股息率</div>
+    <div class="chart-container" style="height:420px"><canvas id="chartShiller20"></canvas></div>
+    <div style="margin-top:10px;font-size:0.82rem;color:#6b7a8d;line-height:1.7">
+      <b>数据来源：</b>Robert Shiller / multpl.com，1871-2025年1月值。EPS = Price / PE（衍生值）。<br>
+      <b>核心结论：</b>任何20年窗口，PE 扩张（紫色）围绕零线波动且贡献极小；回报长期由盈利增长（蓝色）+ 股息（绿色）驱动。<br>
+      <b>153年全期 CAGR：</b>9.0% = 盈利增长 4.2% + PE 扩张 0.6% + 股息 4.3%
+    </div>
+  </div>
+
+  <div class="section" id="shillerLog">
+    <h2>153年累积增长：对数坐标 + 线性拟合 (Shiller 1871-2025)</h2>
+    <div class="desc">对数坐标下，直线 = 恒定年化增速 &nbsp;|&nbsp; 斜率 = CAGR &nbsp;|&nbsp; PE 围绕均值震荡，不贡献长期增长</div>
+    <div class="chart-container" style="height:460px"><canvas id="chartShillerLog"></canvas></div>
+    <div id="shillerLogStats" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px"></div>
+    <div style="margin-top:8px;font-size:0.82rem;color:#6b7a8d;line-height:1.7">
+      <b>解读：</b>对数坐标下恒定增长率呈直线。Price = EPS × PE，即 log(Price) = log(EPS) + log(PE)。<br>
+      PE 在对数尺度上近似水平（无长期趋势），说明价格的长期增长完全来自盈利增长。<br>
+      总回报 = 价格增长 + 股息再投资，两条线之间的差距即为股息的累积贡献。
+    </div>
+  </div>
+
+  <div class="section" id="sectorDecomp">
+    <h2>行业累积增长：对数坐标 + 线性拟合 (1985-2024)</h2>
+    <div class="desc">对数坐标下，直线 = 恒定年化增速 &nbsp;|&nbsp; 按行业查看累积增长轨迹及 CAGR</div>
+    <div style="margin-bottom:10px">
+      <select id="sectorDecompSelect" style="background:#1a1f2e;color:#e0e6ed;border:1px solid rgba(255,255,255,0.1);padding:6px 12px;border-radius:6px;font-size:0.85rem;min-width:180px">
+      </select>
+    </div>
+    <div class="chart-container" style="height:460px"><canvas id="chartSectorDecomp"></canvas></div>
+    <div id="sectorDecompStats" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px"></div>
+    <div style="margin-top:8px;font-size:0.82rem;color:#6b7a8d;line-height:1.7">
+      <b>解读：</b>对数坐标下恒定增长率呈直线。Price = EPS × PE，即 log(Price) = log(EPS) + log(PE)。<br>
+      总回报 = 价格增长 + 股息再投资。盈利为负的年份（如金融2008）盈利线中断。<br>
+      <b>数据来源：</b>Compustat 公司级别数据按 GICS 行业聚合 (1985-2024)
+    </div>
+  </div>
+
   <div class="section" id="decomp3">
     <h2>行业贡献分解</h2>
     <div class="desc">各 GICS 行业对 S&P 500 总回报的贡献 (按市值加权)</div>
@@ -559,6 +610,7 @@ const DATA = {data_json};
 const TURNOVER = {turnover_json};
 const DURATION = {duration_json};
 const DECOMP = {decomp_json};
+const SHILLER = {shiller_json};
 
 Chart.defaults.color = '#6b7a8d';
 Chart.defaults.borderColor = 'rgba(255,255,255,0.05)';
@@ -1210,6 +1262,578 @@ if (DECOMP) {{
       }}
     }}
   }});
+}})();
+
+// CHART SHILLER20: 153-year 20yr rolling decomposition (Stacked Bar + Line)
+(function() {{
+  if (!SHILLER || !SHILLER.rolling || !SHILLER.rolling['20']) return;
+  const r20 = SHILLER.rolling['20'];
+  const years = r20.map(d => d.end_year);
+  // Force exact additivity: pe_adj = total - eps - div
+  const eps = r20.map(d => (d.ann_eps_growth || 0) * 100);
+  const div = r20.map(d => (d.avg_div_yield || 0) * 100);
+  const total = r20.map(d => (d.ann_total_return || 0) * 100);
+  const pe = total.map((t, i) => +(t - eps[i] - div[i]).toFixed(2));
+
+  const ctx = document.getElementById('chartShiller20').getContext('2d');
+  const chart = new Chart(ctx, {{
+    type: 'bar',
+    data: {{
+      labels: years,
+      datasets: [
+        {{
+          label: '_bar_eps',
+          data: eps,
+          backgroundColor: 'rgba(96,165,250,0.35)',
+          borderColor: 'rgba(96,165,250,0.5)',
+          borderWidth: 0.5,
+          stack: 'decomp',
+          order: 3,
+          hidden: false,
+        }},
+        {{
+          label: '_bar_pe',
+          data: pe,
+          backgroundColor: 'rgba(167,139,250,0.35)',
+          borderColor: 'rgba(167,139,250,0.5)',
+          borderWidth: 0.5,
+          stack: 'decomp',
+          order: 3,
+          hidden: false,
+        }},
+        {{
+          label: '_bar_div',
+          data: div,
+          backgroundColor: 'rgba(52,211,153,0.35)',
+          borderColor: 'rgba(52,211,153,0.5)',
+          borderWidth: 0.5,
+          stack: 'decomp',
+          order: 3,
+          hidden: false,
+        }},
+        {{
+          label: '总回报',
+          data: total,
+          type: 'line',
+          borderColor: '#fbbf24',
+          borderWidth: 2.5,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          tension: 0.3,
+          yAxisID: 'y2',
+          order: 1,
+          hidden: false,
+        }},
+        {{
+          label: '盈利增长 (趋势)',
+          data: eps,
+          type: 'line',
+          borderColor: '#60a5fa',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.3,
+          borderDash: [6, 3],
+          yAxisID: 'y2',
+          order: 1,
+          hidden: false,
+        }},
+        {{
+          label: 'PE 扩张 (趋势)',
+          data: pe,
+          type: 'line',
+          borderColor: '#a78bfa',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.3,
+          borderDash: [6, 3],
+          yAxisID: 'y2',
+          order: 1,
+          hidden: false,
+        }},
+        {{
+          label: '股息率 (趋势)',
+          data: div,
+          type: 'line',
+          borderColor: '#34d399',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.3,
+          borderDash: [6, 3],
+          yAxisID: 'y2',
+          order: 1,
+          hidden: false,
+        }},
+      ]
+    }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      interaction: {{ mode: 'index', intersect: false }},
+      plugins: {{
+        legend: {{
+          position: 'top',
+          labels: {{
+            usePointStyle: true, padding: 14, font: {{ size: 12 }},
+            filter: item => !item.text.startsWith('_bar_')
+          }}
+        }},
+        tooltip: {{
+          filter: item => !item.dataset.label.startsWith('_bar_'),
+          callbacks: {{
+            title: items => items[0].label + '年 (过去20年年化)',
+            label: function(item) {{
+              const sign = item.parsed.y >= 0 ? '+' : '';
+              return item.dataset.label + ': ' + sign + item.parsed.y.toFixed(2) + '%';
+            }},
+            afterBody: function(items) {{
+              const idx = items[0].dataIndex;
+              return ['─────────',
+                '验证: ' + eps[idx].toFixed(2) + ' + ' + pe[idx].toFixed(2) + ' + ' + div[idx].toFixed(2) + ' = ' + total[idx].toFixed(2) + '%'];
+            }}
+          }}
+        }}
+      }},
+      scales: {{
+        x: {{
+          stacked: true,
+          ticks: {{ maxRotation: 0, autoSkip: true, maxTicksLimit: 16, font: {{ size: 10 }} }},
+          grid: {{ display: false }}
+        }},
+        y: {{
+          stacked: true,
+          ticks: {{ callback: v => v + '%' }},
+          grid: {{ color: 'rgba(255,255,255,0.04)' }},
+          title: {{ display: true, text: '年化回报率 (%)', color: '#6b7a8d' }}
+        }},
+        y2: {{
+          display: false,
+          ticks: {{ callback: v => v + '%' }},
+        }}
+      }}
+    }}
+  }});
+  // Force visibility workaround
+  for (let i = 0; i < chart.data.datasets.length; i++) {{
+    chart.getDatasetMeta(i).hidden = null;
+  }}
+  chart.update('none');
+}})();
+
+// CHART SHILLER-LOG: Cumulative growth on log scale with linear fits
+(function() {{
+  if (!SHILLER || !SHILLER.annual || !SHILLER.decomposition) return;
+  const annual = SHILLER.annual;
+  const decomp = SHILLER.decomposition;
+  const years = Object.keys(annual).map(Number).sort((a,b) => a - b);
+
+  // Build series: Price, EPS, PE, Total Return Index, Dividend Compound Index
+  const price = years.map(y => annual[String(y)].price);
+  const eps = years.map(y => annual[String(y)].eps);
+  const pe = years.map(y => annual[String(y)].pe);
+
+  // Total Return Index: $1 compounded by (price_return + div_yield) each year
+  const totalIdx = [1];
+  const divIdx = [1];
+  for (let i = 0; i < decomp.length; i++) {{
+    const d = decomp[i];
+    totalIdx.push(totalIdx[totalIdx.length - 1] * (1 + d.total_return));
+    divIdx.push(divIdx[divIdx.length - 1] * (1 + d.div_yield));
+  }}
+  // Align: decomp starts at year 1872, so totalIdx[0]=1 at year 1871, totalIdx[1] at 1872, ...
+  // years array starts at 1871
+  // totalIdx has length = years.length (1871..2025 = 155 entries)
+
+  // Normalize all to index 100 at first year for visual comparison
+  const p0 = price[0], e0 = eps[0], pe0 = pe[0];
+  const priceNorm = price.map(v => v / p0 * 100);
+  const epsNorm = eps.map(v => v / e0 * 100);
+  const peNorm = pe.map(v => v / pe0 * 100);
+  const totalNorm = totalIdx.map(v => v * 100);
+  const divNorm = divIdx.map(v => v * 100);
+
+  // Linear regression on log10 values: y = slope * x + intercept
+  function linreg(xs, ys) {{
+    const n = xs.length;
+    let sx = 0, sy = 0, sxx = 0, sxy = 0;
+    for (let i = 0; i < n; i++) {{
+      if (ys[i] <= 0) continue;
+      const logy = Math.log10(ys[i]);
+      sx += xs[i]; sy += logy; sxx += xs[i] * xs[i]; sxy += xs[i] * logy;
+    }}
+    const slope = (n * sxy - sx * sy) / (n * sxx - sx * sx);
+    const intercept = (sy - slope * sx) / n;
+    const cagr = Math.pow(10, slope) - 1;
+    return {{ slope, intercept, cagr }};
+  }}
+
+  const fitPrice = linreg(years, priceNorm);
+  const fitEps = linreg(years, epsNorm);
+  const fitPe = linreg(years, peNorm);
+  const fitTotal = linreg(years, totalNorm);
+
+  // Generate fit lines
+  function fitLine(fit, xs) {{
+    return xs.map(x => Math.pow(10, fit.slope * x + fit.intercept));
+  }}
+  const fitPriceLine = fitLine(fitPrice, years);
+  const fitEpsLine = fitLine(fitEps, years);
+  const fitPeLine = fitLine(fitPe, years);
+  const fitTotalLine = fitLine(fitTotal, years);
+
+  const ctx = document.getElementById('chartShillerLog').getContext('2d');
+  const chart = new Chart(ctx, {{
+    type: 'line',
+    data: {{
+      labels: years,
+      datasets: [
+        // Actual data
+        {{ label: '总回报 (含股息再投资)', data: totalNorm, borderColor: '#fbbf24', borderWidth: 2, pointRadius: 0, tension: 0.1, hidden: false }},
+        {{ label: 'S&P 500 价格', data: priceNorm, borderColor: '#f87171', borderWidth: 2, pointRadius: 0, tension: 0.1, hidden: false }},
+        {{ label: '每股盈利 (EPS)', data: epsNorm, borderColor: '#60a5fa', borderWidth: 2, pointRadius: 0, tension: 0.1, hidden: false }},
+        {{ label: 'PE 比率', data: peNorm, borderColor: '#a78bfa', borderWidth: 2, pointRadius: 0, tension: 0.1, hidden: false }},
+        // Fit lines
+        {{ label: '拟合: 总回报 CAGR ' + (fitTotal.cagr * 100).toFixed(1) + '%', data: fitTotalLine, borderColor: 'rgba(251,191,36,0.5)', borderWidth: 1.5, borderDash: [8, 4], pointRadius: 0, tension: 0, hidden: false }},
+        {{ label: '拟合: 价格 CAGR ' + (fitPrice.cagr * 100).toFixed(1) + '%', data: fitPriceLine, borderColor: 'rgba(248,113,113,0.5)', borderWidth: 1.5, borderDash: [8, 4], pointRadius: 0, tension: 0, hidden: false }},
+        {{ label: '拟合: EPS CAGR ' + (fitEps.cagr * 100).toFixed(1) + '%', data: fitEpsLine, borderColor: 'rgba(96,165,250,0.5)', borderWidth: 1.5, borderDash: [8, 4], pointRadius: 0, tension: 0, hidden: false }},
+        {{ label: '拟合: PE CAGR ' + (fitPe.cagr * 100).toFixed(1) + '%', data: fitPeLine, borderColor: 'rgba(167,139,250,0.5)', borderWidth: 1.5, borderDash: [8, 4], pointRadius: 0, tension: 0, hidden: false }},
+      ]
+    }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      interaction: {{ mode: 'index', intersect: false }},
+      plugins: {{
+        legend: {{ position: 'top', labels: {{ usePointStyle: true, padding: 10, font: {{ size: 11 }} }} }},
+        tooltip: {{
+          callbacks: {{
+            title: items => items[0].label + '年',
+            label: function(item) {{
+              const v = item.parsed.y;
+              if (item.dataset.label.startsWith('拟合')) return item.dataset.label;
+              return item.dataset.label + ': ' + v.toFixed(1) + ' (×' + (v / 100).toFixed(1) + ')';
+            }}
+          }}
+        }}
+      }},
+      scales: {{
+        x: {{
+          ticks: {{ maxRotation: 0, autoSkip: true, maxTicksLimit: 16, font: {{ size: 10 }} }},
+          grid: {{ display: false }}
+        }},
+        y: {{
+          type: 'logarithmic',
+          title: {{ display: true, text: '指数 (1871=100, 对数坐标)', color: '#6b7a8d' }},
+          ticks: {{
+            callback: function(v) {{
+              if ([1, 10, 100, 1000, 10000, 100000, 1000000].includes(v)) return v.toLocaleString();
+              return '';
+            }}
+          }},
+          grid: {{ color: 'rgba(255,255,255,0.04)' }}
+        }}
+      }}
+    }}
+  }});
+  for (let i = 0; i < chart.data.datasets.length; i++) {{
+    chart.getDatasetMeta(i).hidden = null;
+  }}
+  chart.update('none');
+
+  // Stats cards
+  const container = document.getElementById('shillerLogStats');
+  const items = [
+    {{ name: '总回报', cagr: fitTotal.cagr, color: '#fbbf24', mult: totalNorm[totalNorm.length - 1] / 100 }},
+    {{ name: '价格', cagr: fitPrice.cagr, color: '#f87171', mult: priceNorm[priceNorm.length - 1] / 100 }},
+    {{ name: 'EPS', cagr: fitEps.cagr, color: '#60a5fa', mult: epsNorm[epsNorm.length - 1] / 100 }},
+    {{ name: 'PE', cagr: fitPe.cagr, color: '#a78bfa', mult: peNorm[peNorm.length - 1] / 100 }},
+  ];
+  items.forEach(it => {{
+    container.innerHTML += `<div class="card" style="text-align:center">
+      <div style="font-size:1.8rem;font-weight:700;color:${{it.color}}">${{(it.cagr * 100).toFixed(1)}}%</div>
+      <div class="label">${{it.name}} CAGR</div>
+      <div style="font-size:0.78rem;color:#4a5568;margin-top:4px">${{it.mult.toFixed(0)}}x in 153yr</div>
+    </div>`;
+  }});
+}})();
+
+// CHART SECTOR-DECOMP: Cumulative growth on log scale (switchable by sector)
+(function() {{
+  if (!DECOMP) return;
+  const agg = DECOMP.aggregate;
+  const sectors = DECOMP.sectors;
+  const select = document.getElementById('sectorDecompSelect');
+  const statsEl = document.getElementById('sectorDecompStats');
+
+  // Build sector list
+  const sectorMap = {{}};
+  sectors.forEach(s => {{
+    if (s.sector !== 'XX') sectorMap[s.sector] = s.sector_name;
+  }});
+  const sectorCodes = Object.keys(sectorMap).sort((a,b) => sectorMap[a].localeCompare(sectorMap[b]));
+
+  const optAll = document.createElement('option');
+  optAll.value = 'ALL'; optAll.text = '所有行业 (S&P 500 聚合)'; optAll.selected = true;
+  select.appendChild(optAll);
+  sectorCodes.forEach(code => {{
+    const opt = document.createElement('option');
+    opt.value = code; opt.text = sectorMap[code];
+    select.appendChild(opt);
+  }});
+
+  // Linear regression on log10 values
+  function linreg(xs, ys) {{
+    let n = 0, sx = 0, sy = 0, sxx = 0, sxy = 0;
+    for (let i = 0; i < xs.length; i++) {{
+      if (ys[i] == null || ys[i] <= 0) continue;
+      const logy = Math.log10(ys[i]);
+      sx += xs[i]; sy += logy; sxx += xs[i] * xs[i]; sxy += xs[i] * logy; n++;
+    }}
+    if (n < 2) return null;
+    const slope = (n * sxy - sx * sy) / (n * sxx - sx * sx);
+    const intercept = (sy - slope * sx) / n;
+    const cagr = Math.pow(10, slope) - 1;
+    return {{ slope, intercept, cagr }};
+  }}
+  function fitLine(fit, xs) {{
+    if (!fit) return xs.map(() => null);
+    return xs.map(x => Math.pow(10, fit.slope * x + fit.intercept));
+  }}
+
+  let chart = null;
+  // Persist legend hidden state across sector switches
+  // Keys: dataset labels that are toggled OFF by user
+  const hiddenLabels = new Set();
+  // Map from semantic key to dataset label (labels change with CAGR values)
+  const labelKeys = ['总回报', '价格', '盈利', 'PE', '拟合总回报', '拟合价格', '拟合盈利', '拟合PE', '指数权重'];
+  function getLabelKey(label) {{
+    if (label.startsWith('总回报')) return '总回报';
+    if (label === '价格') return '价格';
+    if (label === '盈利') return '盈利';
+    if (label.startsWith('PE')) return 'PE';
+    if (label === '指数权重') return '指数权重';
+    if (label.includes('总回报')) return '拟合总回报';
+    if (label.includes('价格')) return '拟合价格';
+    if (label.includes('盈利')) return '拟合盈利';
+    if (label.includes('PE')) return '拟合PE';
+    return label;
+  }}
+  function saveHiddenState() {{
+    if (!chart) return;
+    hiddenLabels.clear();
+    chart.data.datasets.forEach((ds, i) => {{
+      if (chart.getDatasetMeta(i).hidden) {{
+        hiddenLabels.add(getLabelKey(ds.label));
+      }}
+    }});
+  }}
+
+  function renderSector(sectorCode) {{
+    let data, title;
+    if (sectorCode === 'ALL') {{
+      data = agg.slice().sort((a,b) => a.year - b.year);
+      title = 'S&P 500 聚合';
+    }} else {{
+      data = sectors.filter(s => s.sector === sectorCode).sort((a,b) => a.year - b.year);
+      title = sectorMap[sectorCode];
+    }}
+    if (data.length < 2) return;
+
+    const years = data.map(d => d.year);
+
+    // Build cumulative indices (base 100 at first year)
+    // Total Return Index: cumulate (1 + price_return + dividend_yield)
+    const totalIdx = [100];
+    // Price Index: cumulate (1 + price_return)
+    const priceIdx = [100];
+    // Earnings Index: cumulate (1 + earnings_growth), null when earnings_growth is null
+    const earnIdx = [100];
+    let earnBroken = false;
+
+    for (let i = 1; i < data.length; i++) {{
+      const d = data[i];
+      const pr = d.price_return != null ? d.price_return : 0;
+      const dy = d.dividend_yield != null ? d.dividend_yield : 0;
+      const tr = (sectorCode === 'ALL' && d.total_return != null) ? d.total_return : pr + dy;
+
+      priceIdx.push(priceIdx[i - 1] * (1 + pr));
+      totalIdx.push(totalIdx[i - 1] * (1 + tr));
+
+      if (d.earnings_growth != null && !earnBroken) {{
+        const next = earnIdx[earnIdx.length - 1] * (1 + d.earnings_growth);
+        earnIdx.push(next > 0 ? next : null);
+        if (next <= 0) earnBroken = true;
+      }} else {{
+        // Try to recover from break using ni ratio
+        if (d.ni != null && d.ni > 0 && data[0].ni != null && data[0].ni > 0) {{
+          earnIdx.push(100 * d.ni / data[0].ni);
+          earnBroken = false;
+        }} else {{
+          earnIdx.push(null);
+        }}
+      }}
+    }}
+
+    // PE index: derive from price / earnings, or use raw pe normalized
+    const peIdx = years.map((y, i) => {{
+      if (earnIdx[i] != null && earnIdx[i] > 0) {{
+        return priceIdx[i] / earnIdx[i] * 100;
+      }}
+      // fallback: use raw pe field if available
+      const d = data[i];
+      if (d.pe != null && d.pe > 0 && data[0].pe != null && data[0].pe > 0) {{
+        return 100 * d.pe / data[0].pe;
+      }}
+      return null;
+    }});
+
+    // Weight data (% of S&P 500 market cap)
+    const weights = data.map(d => d.weight != null ? +(d.weight * 100).toFixed(1) : null);
+    const showWeight = sectorCode !== 'ALL';
+
+    // Compute fits
+    const fitTotal = linreg(years, totalIdx);
+    const fitPrice = linreg(years, priceIdx);
+    const fitEarn  = linreg(years, earnIdx);
+    const fitPe    = linreg(years, peIdx);
+
+    // Build datasets
+    const datasets = [
+      {{ label: '总回报 (含股息再投资)', data: totalIdx, borderColor: '#fbbf24', borderWidth: 2.5, pointRadius: 0, tension: 0.1, yAxisID: 'y' }},
+      {{ label: '价格', data: priceIdx, borderColor: '#f87171', borderWidth: 2, pointRadius: 0, tension: 0.1, yAxisID: 'y' }},
+      {{ label: '盈利', data: earnIdx, borderColor: '#60a5fa', borderWidth: 2, pointRadius: 0, tension: 0.1, spanGaps: false, yAxisID: 'y' }},
+      {{ label: 'PE 比率', data: peIdx, borderColor: '#a78bfa', borderWidth: 2, pointRadius: 0, tension: 0.1, spanGaps: false, yAxisID: 'y' }},
+      {{ label: fitTotal ? '拟合: 总回报 CAGR ' + (fitTotal.cagr * 100).toFixed(1) + '%' : '拟合: 总回报',
+         data: fitLine(fitTotal, years), borderColor: 'rgba(251,191,36,0.45)', borderWidth: 1.5, borderDash: [8,4], pointRadius: 0, tension: 0, yAxisID: 'y' }},
+      {{ label: fitPrice ? '拟合: 价格 CAGR ' + (fitPrice.cagr * 100).toFixed(1) + '%' : '拟合: 价格',
+         data: fitLine(fitPrice, years), borderColor: 'rgba(248,113,113,0.45)', borderWidth: 1.5, borderDash: [8,4], pointRadius: 0, tension: 0, yAxisID: 'y' }},
+      {{ label: fitEarn ? '拟合: 盈利 CAGR ' + (fitEarn.cagr * 100).toFixed(1) + '%' : '拟合: 盈利',
+         data: fitLine(fitEarn, years), borderColor: 'rgba(96,165,250,0.45)', borderWidth: 1.5, borderDash: [8,4], pointRadius: 0, tension: 0, yAxisID: 'y' }},
+      {{ label: fitPe ? '拟合: PE CAGR ' + (fitPe.cagr * 100).toFixed(1) + '%' : '拟合: PE',
+         data: fitLine(fitPe, years), borderColor: 'rgba(167,139,250,0.45)', borderWidth: 1.5, borderDash: [8,4], pointRadius: 0, tension: 0, yAxisID: 'y' }},
+    ];
+    // Add weight area for individual sectors
+    if (showWeight) {{
+      datasets.push({{
+        label: '指数权重',
+        data: weights,
+        borderColor: 'rgba(255,255,255,0.3)',
+        backgroundColor: 'rgba(255,255,255,0.06)',
+        borderWidth: 1,
+        pointRadius: 0,
+        tension: 0.3,
+        fill: true,
+        yAxisID: 'y2',
+        order: 10,
+      }});
+    }}
+
+    saveHiddenState();
+    if (chart) chart.destroy();
+    const ctx = document.getElementById('chartSectorDecomp').getContext('2d');
+    chart = new Chart(ctx, {{
+      type: 'line',
+      data: {{ labels: years, datasets: datasets }},
+      options: {{
+        responsive: true, maintainAspectRatio: false,
+        interaction: {{ mode: 'index', intersect: false }},
+        plugins: {{
+          title: {{
+            display: true, text: title,
+            color: '#e0e6ed', font: {{ size: 14, weight: '600' }}, padding: {{ bottom: 10 }}
+          }},
+          legend: {{
+            position: 'top',
+            labels: {{
+              usePointStyle: true, padding: 10, font: {{ size: 11 }}
+            }}
+          }},
+          tooltip: {{
+            callbacks: {{
+              title: items => items[0].label + '年',
+              label: function(item) {{
+                const v = item.parsed.y;
+                if (v == null) return '';
+                if (item.dataset.label.startsWith('拟合')) return null;
+                if (item.dataset.label === '指数权重') return '指数权重: ' + v.toFixed(1) + '%';
+                return item.dataset.label + ': ' + v.toFixed(1) + ' (×' + (v / 100).toFixed(1) + ')';
+              }},
+              afterBody: function(items) {{
+                if (!showWeight) return [];
+                const idx = items[0].dataIndex;
+                const w = weights[idx];
+                const d = data[idx];
+                const lines = ['─────────'];
+                if (w != null) lines.push('占 S&P 500 市值: ' + w.toFixed(1) + '%');
+                if (d.count != null) lines.push('公司数: ' + d.count);
+                return lines;
+              }}
+            }},
+            filter: item => !item.dataset.label.startsWith('拟合')
+          }}
+        }},
+        scales: {{
+          x: {{
+            ticks: {{ maxRotation: 0, autoSkip: true, maxTicksLimit: 20, font: {{ size: 10 }} }},
+            grid: {{ display: false }}
+          }},
+          y: {{
+            type: 'logarithmic',
+            position: 'left',
+            title: {{ display: true, text: '指数 (1985=100, 对数坐标)', color: '#6b7a8d' }},
+            ticks: {{
+              callback: function(v) {{
+                if ([10, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000].includes(v)) return v.toLocaleString();
+                return '';
+              }}
+            }},
+            grid: {{ color: 'rgba(255,255,255,0.04)' }}
+          }},
+          y2: {{
+            type: 'linear',
+            position: 'right',
+            display: showWeight,
+            min: 0,
+            max: Math.max(50, ...weights.filter(w => w != null)) * 1.3,
+            title: {{ display: showWeight, text: '指数权重 (%)', color: '#6b7a8d' }},
+            ticks: {{ callback: v => v + '%', font: {{ size: 10 }}, color: 'rgba(255,255,255,0.3)' }},
+            grid: {{ display: false }}
+          }}
+        }}
+      }}
+    }});
+    // Restore legend hidden state from previous render
+    for (let i = 0; i < chart.data.datasets.length; i++) {{
+      const key = getLabelKey(chart.data.datasets[i].label);
+      if (hiddenLabels.has(key)) {{
+        chart.getDatasetMeta(i).hidden = true;
+      }} else {{
+        chart.getDatasetMeta(i).hidden = null;
+      }}
+    }}
+    chart.update('none');
+
+    // Stats cards
+    const n = years.length;
+    const items = [
+      {{ name: '总回报', fit: fitTotal, color: '#fbbf24', mult: totalIdx[n-1] / 100 }},
+      {{ name: '价格', fit: fitPrice, color: '#f87171', mult: priceIdx[n-1] / 100 }},
+      {{ name: '盈利', fit: fitEarn, color: '#60a5fa', mult: earnIdx[n-1] != null ? earnIdx[n-1] / 100 : null }},
+      {{ name: 'PE', fit: fitPe, color: '#a78bfa', mult: peIdx[n-1] != null ? peIdx[n-1] / 100 : null }},
+    ];
+    statsEl.innerHTML = items.map(it => {{
+      const cagr = it.fit ? (it.fit.cagr * 100).toFixed(1) + '%' : 'N/A';
+      const mult = it.mult != null ? it.mult.toFixed(1) + 'x' : 'N/A';
+      return `<div class="card" style="text-align:center">
+        <div style="font-size:1.5rem;font-weight:700;color:${{it.color}}">${{cagr}}</div>
+        <div class="label">${{it.name}} CAGR</div>
+        <div style="font-size:0.75rem;color:#4a5568;margin-top:2px">${{mult}} in ${{n}}yr</div>
+      </div>`;
+    }}).join('');
+  }}
+
+  select.addEventListener('change', () => renderSector(select.value));
+  renderSector('ALL');
 }})();
 
 // CHART D3: Industry Contribution (Horizontal Bar, switchable by year)
